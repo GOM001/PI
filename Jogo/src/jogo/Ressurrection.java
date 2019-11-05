@@ -53,7 +53,7 @@ public class Ressurrection {
 			
 			
 			} while(iniciar != 1);
-					
+				
 		}
 		
 		static void menu () {
@@ -190,7 +190,50 @@ public class Ressurrection {
 					""
 					);
 			sc.nextLine();
-		}static void imgdesafio5() {
+		}
+		
+		static int desafioboneco() {
+			int fase =  0;
+			String escolha;
+			int cont = 1;
+			
+			System.out.println(" Informe sua resposta : ");
+			escolha = sc.next();
+			do {
+				System.out.println(" Em quantos litros por minuto, o derretimento do boneco? ");
+				
+				switch (escolha) {
+				
+				case "a":
+				case "A":
+				case "b":
+				case "B":
+				case "c":	
+				case "C":
+				case "e":
+				case "E":
+					System.out.println(" Voce Errou... ");
+					gameOver();
+					break;
+				case "D" :
+				case "d" :
+					cont = 3;
+					fase = 4;
+					break;
+					
+				default : 
+					
+					System.out.println(" Opcao Invalida!");
+				}
+					
+			}while(cont<=2);
+			
+			return fase;
+			
+			
+		}
+		
+		static void imgdesafio5() {
 			System.out.println("\n"
 				+   "█████████████▀▀▀▀▀███████▀▀▀▀▀█████████████\r\n" + 
 					"█████████▀░░▀▀█▄▄▄▄▄▄██▄▄▄▄▄▄█▀░░▀█████████\r\n" + 
@@ -217,7 +260,21 @@ public class Ressurrection {
 		}
 
 		
-
+static void gameOver() {
+	System.out.println(""
+			+ "\r\n" + 
+			" ▄█▀▀▀▀▀ ▄██▀██▄ ██▄ ▄██ ██▀▀▀\r\n" + 
+			"██   ▄▄▄ ██▄▄▄██ ██▀█▀██ ██▀▀\r\n" + 
+			" ▀█▄▄▄██ ██   ██ ██   ██ ██▄▄▄\r\n" + 
+			"\r\n" + 
+			"▄█▀▀▀▀█▄ ██   ██ ██▀▀▀ ██▀▀█▄\r\n" + 
+			"██    ██ ██   ██ ██▄▄  ██▄▄██\r\n" + 
+			"██    ██ ▀██▄██▀ ██    ██▀█▄\r\n" + 
+			"▀█▄▄▄▄█▀   ▀█▀   ██▄▄▄ ██ ▀█▄\r\n" + 
+			"\r\n" + 
+			"\r\n" + 
+			"");
+}
 	
 
 	public static void main(String[] args) {
@@ -229,6 +286,7 @@ public class Ressurrection {
 	imgdesafio3();
 	imgdesafio4();
 	imgdesafio5();
+	gameOver();
 	}
 	
 
