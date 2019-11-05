@@ -6,8 +6,9 @@ public class Ressurrection {
 			String escolha1;
 			int iniciar = 0;
 			do {
+				System.out.println(" Ressurection e um RPG que se passa em um mundo espiritual. Onde suas escolhas podem mudar o seu caminho para sempre. Pense bem antes delas! ");
 				System.out.println("           \n "
-						+ "                      ¶¶¶¶¶¶¶\n" +
+						+ "                       ¶¶¶¶¶¶¶\n" +
 						"                        ¶_____¶\n" + 
 						"                        ¶_____¶ \n" + 
 						"                        ¶_____¶\n" + 
@@ -38,6 +39,7 @@ public class Ressurrection {
 						"▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒\n" + 
 						"▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒\n" + 
 						"");
+			
 			System.out.println(" Digite 'Sim' para continuar : ");
 			escolha1 = sc.next();
 			switch (escolha1) {
@@ -46,24 +48,50 @@ public class Ressurrection {
 				iniciar = 1;
 				break;
 			default :
-				System.out.println(" Escolha invalida, digite Sim para iniciar o Jogo! ");
+								System.out.println(" Escolha invalida, digite Sim para iniciar o Jogo! ");
 			}
 			
 			
 			} while(iniciar != 1);
+					
+		}
+		
+		static void menu () {
+			int opcao;
+			do {
+				System.out.println("1 - Instruções");
+				System.out.println("2 - Jogar");
+				System.out.println("3 - Créditos");
+				System.out.println("4 - Sair");
+				System.out.print("Escolha uma opção: ");
+				opcao = sc.nextInt();
+				switch (opcao) {
+					case 1:
+						System.out.println("Você escolheu a opção Instruções");
+						introducao();
+						break;
+					case 2:
+						System.out.println("Você escolheu a opção Jogar");
+						break;
+					case 3:
+						System.out.println("Você escolheu a opção Créditos");
+						break;
+					case 4:
+						System.out.println("Você escolheu a opção Sair");
+						inicio();
+						break;
+					default:
+						System.out.println("Opção inválida!");
+				}
+			} while (opcao != 4);
 			
-			System.out.println(" ************************ INTRODUCAO********************************"+"\n"+
-					" Em um estado espiritual o Protagonista se vê fora da sua mente em um mundo paralelo e é recebido pelo orientador das almas, que informa que não esperava a sua ida para o mundo do julgamento.\r\n" + 
-					"“Qual é o Seu nome infeliz Criatura?”\r\n" + 
-					"\r\n" + 
-					"E com isso o mesmo lança o desafio:\r\n" + 
-					"\r\n" + 
-					"“Se quiser Voltar para o seu mundo deve completar os desafios do meu, você terá um dia terrestre para completar, alguém para te ajudar e outro para atrapalhar, preste muita atenção e obtenha a ressurreição.”\r\n" + 
-					"\r\n" + 
-					"O Protagonista terá 24h para terminar todos os desafios e ter a oportunidade de viver novamente : Que o jogo comece! Start\r\n" + 
-					"");
+		}
+		static void introducao() {
+			
+			System.out.println(" ******************************* INTRODUCAO*************************************");
 
 			sc.nextLine();
+			
 			
 		}
 		
@@ -194,6 +222,8 @@ public class Ressurrection {
 
 	public static void main(String[] args) {
 		inicio();
+		menu();
+		introducao();
 	imgdesafio1();
 	imgdesafio2();
 	imgdesafio3();
