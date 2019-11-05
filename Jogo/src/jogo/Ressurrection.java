@@ -74,7 +74,9 @@ public class Ressurrection {
 						System.out.println("Você escolheu a opção Jogar");
 						break;
 					case 3:
-						System.out.println("Você escolheu a opção Créditos");
+						System.out.println("\nVocê escolheu a opção Créditos\n\n"
+								+ "Criado por Aurélio bispo, Felipe Anderson, Pedro Henrique e Pedro Gomes.\n"
+								+ "Baseado no anime Yu Yu Hakusho de Yoshihiro Togashi e no jogo Undertale de Toby Fox\n\n");
 						break;
 					case 4:
 						System.out.println("Você escolheu a opção Sair");
