@@ -6,6 +6,13 @@ public class Ressurrection {
 		// definição Estática do método Scanner
 		static Scanner sc = new Scanner (System.in);
 		
+		// Método Para Definir Quantidade de Linhas a Pular
+		static void centro(int n) {
+			for (int i = 0; i < n; i++) {
+				System.out.print("\n");
+			}
+		}
+		
 		// Método de inicio do Jogo
 		static void inicio() {
 				System.out.println("\n");
@@ -37,53 +44,128 @@ public class Ressurrection {
 						"░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n" + 
 						"░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n" + 
 						"░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n" + 
-						"\n" + 
-						"\n" + 
-						"\n" + 
 						"");
-			
+				centro(7);
 			System.out.println(" Digite Enter para continuar");
 			sc.nextLine();				
 		}
 
 		
-		// Método de Menu
+		// Método Menu
 		static int menu () {
 			int parada = 0; //Variável de Retorno da função para parar o jogo
-			
-			int opcao;
-				System.out.println("1 - Instruções");
-				System.out.println("2 - Jogar");
-				System.out.println("3 - Créditos");
-				System.out.println("4 - Sair");
-				System.out.print("Escolha uma opção: ");
-				opcao = sc.nextInt();
+			int opcao = opcoes1();
 				switch (opcao) {
 					case 1:
-						System.out.println("\nVocê escolheu a opção Instruções\n\n"
-								+ "Ressurection e um RPG que se passa em um mundo espiritual; "
-								+ "Onde suas escolhas podem mudar o seu caminho para sempre. Pense bem antes delas!\n\n");						
+						instrucao();			
 						break;
 					case 2:
+						centro(15);
 						System.out.println("Você escolheu a opção Jogar");
+						centro(19);
 						break;
 					case 3:
-						System.out.println("\nVocê escolheu a opção Créditos\n\n"
-								+ "Criado por Aurélio bispo, Felipe Anderson, Pedro Henrique e Pedro Gomes.\n"
-								+ "Baseado no anime Yu Yu Hakusho de Yoshihiro Togashi e no jogo Undertale de Toby Fox\n\n");
+						creditos();
 						break;
 					case 4:
-						System.out.println("Você escolheu a opção Sair");
-						inicio();
+						centro(15);
+						System.out.println("								Você escolheu a opção Sair");
+						centro(4);
+						sc.nextLine();
+						System.out.println("								Tecle Enter para confirmar");
+						centro(13);
+						sc.nextLine();
 						parada = 4;
 						break;
 					default:
+						centro(15);
 						System.out.println("Opção inválida!");
+						centro(19);
 						break;
 				}
 			return parada;
-			
 		}
+			
+/*
+ * 
+ * 
+ * 
+ * Métodos Do Menu
+ * 
+ * 
+ * 
+ * 
+ */
+			
+		static int opcoes1() {
+			int opcao;
+			centro(14);
+				System.out.println(
+			" 								       Menu	      \n" +
+			"								1 - Instruções    \n" +
+			"								2 - Jogar         \n" +
+			"								3 - Créditos      \n" +
+			"								4 - Sair          \n" +
+			"								Escolha uma opção:\n"
+									);
+			centro(19);
+			opcao = sc.nextInt();
+			return opcao;
+		}
+		
+		
+		static void creditos() {
+			centro(15);
+			System.out.println("\nVocê escolheu a opção Créditos\n\n"+
+					 "Criado por Aurélio bispo, Felipe Anderson, Pedro Henrique e Pedro Gomes.\n"+
+					 "Baseado no anime Yu Yu Hakusho de Yoshihiro Togashi e no jogo Undertale de Toby Fox\n\n");
+			centro(19);
+		}
+		
+		static void instrucao() {
+			centro(15);
+			System.out.println(
+			"                                 \n Você escolheu a opção Instruções\n\n" +
+			"    Ressurection e um RPG que se passa em um mundo espiritual;\n " +
+			"    Onde suas escolhas podem mudar o seu caminho para sempre. Pense bem antes delas!\n\n");
+							
+			centro(19);
+		}
+		
+		//Método de Chamada do Inicio e Menu (Zero)
+		
+		static void zero() {
+			int parada = 0;
+			do {
+				inicio();
+				do {
+				parada = menu();
+				if(parada != 4) {
+				sc.nextLine();
+				System.out.println("\n" +
+								   "\n" +
+								   "\n" +
+								   "Tecle Enter Para Voltar ao Menu Inicial" +
+								   "\n");
+				sc.nextLine();
+				}
+				}while(parada != 4);
+			}while(parada ==4);
+		}
+		
+/*
+ * 
+ * 
+ * 
+ * 
+ *  A partir deste ponto iniciamse os Métodos que representam as Cenas do Jogos
+ * 
+ * 
+ * 
+ */		
+		
+		
+		
 		static void introducao() {
 			
 			System.out.println(" ******************************* INTRODUCAO*************************************");
@@ -448,19 +530,9 @@ static void gameOver() {
 	
 
 	public static void main(String[] args) {
-		int parada = 0;
-		do {
-			inicio();
-			do {
-			parada = menu();
-			if(parada != 4) {
-			System.out.println("\n\nTecle Enter Para Voltar ao Menu Inicial");
-			sc.nextLine();
-			}
-			}while(parada != 4);
-		}while(parada ==4);
-	
-		introducao();
+		
+	zero();
+	introducao();
 	imgdesafio1();
 	imgdesafio2();
 	imgdesafio3();
