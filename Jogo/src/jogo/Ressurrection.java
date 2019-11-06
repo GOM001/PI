@@ -1,11 +1,13 @@
 package jogo;
 import java.util.Scanner;
+
+
 public class Ressurrection {
+		// definição Estática do método Scanner
 		static Scanner sc = new Scanner (System.in);
+		
+		// Método de inicio do Jogo
 		static void inicio() {
-			String escolha1;
-			int iniciar = 0;
-			do {
 				System.out.println("\n");
 				System.out.println("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n"
 						+"░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░¶¶¶¶¶¶¶░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n" +
@@ -40,25 +42,16 @@ public class Ressurrection {
 						"\n" + 
 						"");
 			
-			System.out.println(" Digite 'Sim' para continuar : ");
-			escolha1 = sc.next();
-			switch (escolha1) {
-			case "Sim" :
-			case "sim" :	
-				iniciar = 1;
-				break;
-			default :
-								System.out.println(" Escolha invalida, digite Sim para iniciar o Jogo! ");
-			}
-			
-			
-			} while(iniciar != 1);
-				
+			System.out.println(" Digite Enter para continuar");
+			sc.nextLine();				
 		}
+
 		
-		static void menu () {
+		// Método de Menu
+		static int menu () {
+			int parada = 0; //Variável de Retorno da função para parar o jogo
+			
 			int opcao;
-			do {
 				System.out.println("1 - Instruções");
 				System.out.println("2 - Jogar");
 				System.out.println("3 - Créditos");
@@ -69,8 +62,7 @@ public class Ressurrection {
 					case 1:
 						System.out.println("\nVocê escolheu a opção Instruções\n\n"
 								+ "Ressurection e um RPG que se passa em um mundo espiritual; "
-								+ "Onde suas escolhas podem mudar o seu caminho para sempre. Pense bem antes delas!\n\n");
-						introducao();
+								+ "Onde suas escolhas podem mudar o seu caminho para sempre. Pense bem antes delas!\n\n");						
 						break;
 					case 2:
 						System.out.println("Você escolheu a opção Jogar");
@@ -83,11 +75,13 @@ public class Ressurrection {
 					case 4:
 						System.out.println("Você escolheu a opção Sair");
 						inicio();
+						parada = 4;
 						break;
 					default:
 						System.out.println("Opção inválida!");
+						break;
 				}
-			} while (opcao != 4);
+			return parada;
 			
 		}
 		static void introducao() {
@@ -454,8 +448,18 @@ static void gameOver() {
 	
 
 	public static void main(String[] args) {
-		inicio();
-		menu();
+		int parada = 0;
+		do {
+			inicio();
+			do {
+			parada = menu();
+			if(parada != 4) {
+			System.out.println("\n\nTecle Enter Para Voltar ao Menu Inicial");
+			sc.nextLine();
+			}
+			}while(parada != 4);
+		}while(parada ==4);
+	
 		introducao();
 	imgdesafio1();
 	imgdesafio2();
