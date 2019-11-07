@@ -53,24 +53,28 @@ public class RessurrectionGom {
  */
 
 			//MÉTODO PARA CHAMAR INICIO E MENU (ZERO)
-			static void zero() {
-				login[0] = "GOM";
-				login[3] = "GOMGod";
-				fase[0] = 1;
-				System.out.println(login[0]);
+			static int zero() {
+				//login[0] = "GOM";
+				//login[1] = "GOMII";
+				//fase[0] = 1;
 				int parada = 0;
 				do {
 					inicio();
 					do {
 					parada = menu();
+					if (parada == 2) {
+						return 2;
+					}else {
 					if(parada != 4) {
 					sc.nextLine();
 					System.out.println("Tecle Enter Para Voltar ao Menu Inicial" +
 									   "\n");
 					sc.nextLine();
+						}
 					}
 					}while(parada != 4);
 				}while(parada == 4);
+				return 0;
 			}				
 				
 
@@ -125,7 +129,7 @@ public class RessurrectionGom {
 						centro(15);
 						System.out.println("Você escolheu a opção Jogar");
 						centro(17);
-						jogar();
+						parada = 2;
 						break;
 					case "3":
 						creditos();
@@ -158,6 +162,7 @@ public class RessurrectionGom {
 					centro(15);
 					System.out.println("Você escolheu a opção Jogar");
 					centro(17);
+					parada = 2;
 					break;
 				case "4":
 					creditos();
@@ -184,8 +189,8 @@ public class RessurrectionGom {
 		// MÉTODO PARA VERIFICAR SE HÁ ALGUM JOGO SALVO
 		static int controlador(String [] login, int [] fase) {
 			int salvo = 0;
-			for (int i = 0; i < fase.length; i++) {
-				if (fase[i] > 0) {
+			for (int i = 0; i < login.length; i++) {
+				if (login[i] != null) {
 					salvo = 1;
 				}
 			}
@@ -285,19 +290,30 @@ public class RessurrectionGom {
 			int posicaoLogin = posicaoLivre();
 			String loginAtual = login[posicaoLogin];
 			int faseAtual = fase[posicaoLogin];
+			switch (faseAtual) {
+			case 0:
+				imgdesafio1();
+				break;
+
+			default:
+				break;
+			}
 		}
 		
 		//METODO CONTINUAR JOGO
 		static void continuarJogo() {
 			centro(15);
 			System.out.println("Continuar Jogo");
-			System.out.printf(
-			"\n						Selecione o Jogador"+
-			"\n							1 - "+ login[0]+
-			"\n							2 - "+ login[1]+
-			"\n							3 - "+ login[2]+
-			"\n							4 - "+ login[3]+
-			"\n							5 - "+ login[4]);
+			System.out.println("\n						Selecione o Jogador");
+			for (int i = 0; i < login.length; i++) {
+				if (login[i] != null) {
+				System.out.println("							"+ (i+1) +" - "+ login[i]);
+				}
+				else {
+					System.out.println("");
+				}
+			}
+			
 			centro(15);
 		}
 		
@@ -679,14 +695,21 @@ static void gameOver() {
 	
 
 	public static void main(String[] args) {
-	zero();
-	introducao();
+	int inicio = zero();
+	if (inicio == 2){
+		jogar();
+	}
+	else if (inicio == 3) {
+		continuarJogo();
+	}
+	/*introducao();
 	imgdesafio1();
 	imgdesafio2();
 	imgdesafio3();
 	imgdesafio4();
 	imgdesafio5();
 	gameOver();
+	*/
 	}
 	
 
