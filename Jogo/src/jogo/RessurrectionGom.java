@@ -296,7 +296,7 @@ public class RessurrectionGom {
 			switch (faseAtual) {
 			case 0:
 				desafio1();
-				desafio4();
+				desafio2();
 				break;
 
 			default:
@@ -322,6 +322,31 @@ public class RessurrectionGom {
 		}
 		
 		
+/*#############################################################################################################################################################
+ * 				        ██████████████████████         
+ *				      ██████████████████████████        
+ *				    ██████████████████████████████      
+ *				  ████████████████████████████████    
+ *				  ████████    ██████████████████████  
+ *				  ██████        ██        ██████████  
+ *				  ██████    ██        ██    ██████████
+ *				██████      ██        ██    ████  ████ 
+ *				██████      ██        ██    ██    ████ 
+ *				██████                          ██████ 
+ *				██████  ░░░░  ██    ██  ░░░░  ████████
+ *				████████░░░░    ████    ░░░░██████████
+ *				████████████            ██████████████
+ *				  ██  ████████████    ██████████  ██   
+ *				                ██    ██     ██        		
+ * 
+ * 
+ * 							CENAS DO JOGO
+ * 
+ * #############################################################################################################################################################
+ */	
+		
+
+		// INDRODUÇÃO
 		static void introducao() {
 			
 			System.out.println(" ******************************* INTRODUCAO*************************************");
@@ -333,168 +358,27 @@ public class RessurrectionGom {
 		
 		
 /*#############################################################################################################################################################
+ *
+ * 					 ░░░░░▄▄▀▀▀▀▀▀▀▀▀▄▄░░░░░                                                                 
+ *					 ░░░░█░░░░░░░░░░░░░█░░░░                                                                                                                           \n"+
+ *					 ░░░█░░░░░░░░░░▄▄▄░░█░░░                                                                                           
+ *					 ░░░█░░▄▄▄░░▄░░███░░█░░░                                                                                                                             \n"+
+ *					 ░░░▄█░▄░░░▀▀▀░░░▄░█▄░░░                                                                                               
+ *					 ░░░█░░▀█▀█▀█▀█▀█▀░░█░░░                                                                                             
+ *					 ░░░▄██▄▄▀▀▀▀▀▀▀▄▄██▄░░░                                                                   
+ *					 ░▄█░█▀▀█▀▀▀█▀▀▀█▀▀█░█▄░                                                                                          
+ *					 ▄▀░▄▄▀▄▄▀▀▀▄▀▀▀▄▄▀▄▄░▀▄                                                               
+ *					 █░░░░▀▄░█▄░░░▄█░▄▀░░░░█                                                                          
+ *					 ░▀▄▄░█░░█▄▄▄▄▄█░░█░▄▄▀░                                                             
+ *					 ░░░▀██▄▄███████▄▄██▀░░░                                                                       
+ *					 ░░░████████▀████████░░░                                                                  
+ *					 ░░▄▄█▀▀▀▀█░░░█▀▀▀▀█▄▄░                                                                          
+ *					 ░░▀▄▄▄▄▄▀▀░░░▀▀▄▄▄▄▄▀░░
  * 
- * 
- * 
- * 
- *  								CENAS DO JOGO
- *  
- * 
+ * 							DESAFIO 1
  * 
  * #############################################################################################################################################################
- */	
-		
-///////////////////////////////////////// PRIMEIRO DESAFIO DO JOGO /////////////////////////////////
-
-	static void desafio1() {
-
-		String r = "";
-		String resp = "";
-		String lul = "número do pulo + 2";
-		int n1 = 0;
-		ArrayList<String> resposta = new ArrayList<String>();
-		resposta.add("número do pulo + 3");
-		resposta.add("número do pulo * 3");
-		resposta.add("número do pulo * 2");
-		resposta.add("número do pulo + 2"); // como não sei qual é a resposta correta levei que seria essa
-
-		do {
-			System.out.println("Qual alternativa está correta? ");
-
-			Collections.shuffle(resposta);
-			System.out.println("A)" + resposta.get(0));
-			System.out.println("B)" + resposta.get(1));
-			System.out.println("C)" + resposta.get(2));
-			System.out.println("D)" + resposta.get(3));
-
-			r = sc.next();
-
-			// (A) - número do pulo + 3
-			// (B) - número do pulo * 3
-			// (C) - número do pulo * 2
-			// (D) - número do pulo + 2
-
-			switch (r) {
-			case "a":
-			case "A":
-
-				resp = resposta.get(0);
-				break;
-			case "b":
-			case "B":
-
-				resp = resposta.get(1);
-				break;
-			case "c":
-			case "C":
-
-				resp = resposta.get(2);
-				break;
-			case "d":
-			case "D":
-
-				resp = resposta.get(3);
-				break;
-
-			default:
-				System.out.println("Alternativa inválida");
-			}
-
-			if (lul.equals(resp)) {
-				System.out.println("Resposta correta!");
-				n1 = n1 + 2;
-
-			} else {
-				System.out.println("Resposta incorreta!");
-			}
-		} while (n1 <= 1);
-
-	}
-	
-///////////////////////////////////////// SEGUNDO DESAFIO DO JOGO /////////////////////////////////
-
-	static void desafio4() {
-		int i = 1;
-
-		ArrayList<Integer> resp = new ArrayList<Integer>();
-
-		resp.add(20);
-		resp.add(12);
-		resp.add(6);
-		resp.add(4);
-		resp.add(2);
-
-		do {
-			i = i + 1;
-			imgdesafio4();
-			System.out.println(" Tenho 1.000 quilos de neve e o sol está me fazendo derreter de forma constante."
-					+ "\n Em cinquenta minutos mais tarde o calor irá aumentar e o seu tempo diminuir,estarei derretendo mais rápido. veja o quanto tempo tenho e resolva a questão e me ajude a sair desse deserto :"
-					+ "\n a)" + resp.get(0) + "\n b)" + resp.get(1) + "\n c)" + resp.get(2) + "\n d)" + resp.get(3)
-					+ "\n e)" + resp.get(4));
-			String escolha = sc.next();
-			switch (escolha) {
-
-			case "a":
-			case "A":
-				if (resp.get(0) == 4) {
-					System.out.println(" Parabéns Voce Acertou! ");
-					i = 3;
-				} else {
-
-					System.out.println(" Tente novamente!");
-				}
-				break;
-			case "b":
-			case "B":
-				if (resp.get(1) == 4) {
-					System.out.println(" Parabéns Voce Acertou! ");
-					i = 3;
-				} else {
-
-					System.out.println(" Tente novamente!");
-				}
-				break;
-			case "c":
-			case "C":
-				if (resp.get(2) == 4) {
-					System.out.println(" Parabéns Voce Acertou! ");
-					i = 3;
-				} else {
-
-					System.out.println(" Tente novamente!");
-				}
-				break;
-
-			case "D":
-			case "d":
-				if (resp.get(3) == 4) {
-					System.out.println(" Parabéns Voce Acertou! ");
-					i = 3;
-				} else {
-
-					System.out.println(" Tente novamente!");
-				}
-				break;
-			case "e":
-			case "E":
-				if (resp.get(4) == 4) {
-					System.out.println(" Parabéns Voce Acertou! ");
-					i = 3;
-				} else {
-
-					System.out.println(" Tente novamente!");
-				}
-
-			default:
-
-				System.out.println(" Opcao Invalida!");
-				i = 3;
-			}
-			Collections.shuffle(resp);
-		} while (i < 3);
-
-	}
-
+ */		
 		static void imgdesafio1() {
 			
 			System.out.println("\n"
@@ -584,51 +468,244 @@ public class RessurrectionGom {
 				+ "");
 		
 		sc.nextLine();
-		}
-		static void imgdesafio2() {
-			System.out.println("\n"
-					+"                           ______________________________________________________________________                                             \n"+
-					"                          |                                                                      |\n"+
-					 "                          | - Olá criatura desprezível, está preparado para  uma morte terrível? |                                             \n" + 
-					"                          |    Sou a KumoKumo  mas pode me chamar de presságio do seu horror     |                                        \n"+
-					 "                          /   ___________________________________________________________________|                                                                                                                   \n"+
-					"                         /                          \\_*_____/                                                                                   \r\n" + 
-					"                                                    /\\*_|__/\\                                                                                   \n"+
-					"░▄████░▀▄░░░░░░░▄▀░█████▄░                         / /\\_|*/\\ \\                                                                                \r\n" +
-					"████▀█▀▄█████████▄▀█▀████░                       _/_/_/\\|/\\_*_\\_                                                                              \n"+
-					"▀▀░▀▄█████▀▀▀▀▀░▀███▄▀░▀▀░                        \\ \\ \\/|\\* / /                                                                               \r\n" + 
-					"░░░░████▀▄░░██░░▄░███░░░░░                         * \\/_|*\\/ /                                                                                 \n"+
-					"░░░▄███▀▄▀▀░▀▀░▀▀▄▀██▄░░░░                          \\/__|__\\/         \\*__*_|_*___/                                                             \r\n" + 
-					"░▄▄████░███▄░░▄███░███▄▄░░                          /       \\         /\\____|____/\\                                                             \r\n" + 
-					"░░█████░░▀▀░░░░▀▀░░████░░░                                           / /\\___|__*/\\ \\                                                           \r\n" + 
-					"░░░▀▀███▄░▀▄▀▀▄▀░▄██▀▀░░░░           \\____|____/                    / * /\\_*|__/\\ \\ \\                                                            \r\n" + 
-					"░░░░░░░░░▀▄▄░░▄▄█░░░░░░░░░           *\\___|_*_/\\                   / / / /\\_|_/\\ * \\ \\                                                             \r\n" + 
-					"░░░░░░░░▄▀▀▄▀▀▄▀▀▄░░░░░░░░          / /\\*_|_ /\\ \\               __/_*_/_/*/\\|/*_\\_\\_*_\\_                                                                  \r\n" + 
-					"░▄▄▄▄▄▀▀▀██░▄▄░██▀▀▀▄▄▄▄▄░         / / /\\_|_/\\ \\ \\                \\ * \\ \\ \\/|\\/ / / / /                                                             \r\n" + 
-					"▀▄▄▀░░░▄▀█▀█▀▀█▀█▀▄░░░▀▄▄▀      __/_/_*_/\\|/\\_\\_\\*\\__              \\ \\ \\ \\/_|_\\/ * / /                                                              \r\n" + 
-					"░░▄▄▄▄▀▄█▀░▄░░▄░▀█▄▀▄▄▄▄░░        \\ \\ \\ \\/|\\/ / / /                 * \\ \\/__|__\\/ / /                                                             \r\n" + 
-					"░▀▄▄▀░▄▀█░░▄▄▄▄░░█▀▄░▀▄▄▀░         * \\ \\/_|_\\/ * /                   \\ */___|_*_\\/ /                                                           \r\n" + 
-					"░░░░░█▀▄░▀▄▀░░▀▄▀░▄▀█░░░░░          \\ \\/__|*_\\/ /                     \\/_*__|____\\*                                                            \r\n" + 
-					"░░░░░█▄▀░░█▄░░▄█░░▀▄█░░░░░           \\/_*_|___\\/                      /     |     \\                                                            \r\n" + 
-					"░░░░░░░░░▄█▀░░▀█▄░░░░░░░░░           /    |    \\                                                                                                  \r\n" + 
-					"\n"
-					+ "\n"
-					+ "\n"
-					+ "\n"
-					+ "\n"
-					+ "\n"
-					+ "\n"
-					+ "\n"
-					+ "\n"
-					+ "\n"
-					+ "\n"
-					+ "\n"
-					+ "\n"
-					+ "\n"
-					+ "\n"
-					+ "");
-			sc.nextLine();
-		}
+		}	
+		
+		
+		
+	static void desafio1() {
+		imgdesafio1();
+		String r = "";
+		String resp = "";
+		String lul = "número do pulo + 2";
+		int n1 = 0;
+		ArrayList<String> resposta = new ArrayList<String>();
+		resposta.add("número do pulo + 3");
+		resposta.add("número do pulo * 3");
+		resposta.add("número do pulo * 2");
+		resposta.add("número do pulo + 2"); // como não sei qual é a resposta correta levei que seria essa
+
+		do {
+			System.out.println("Qual alternativa está correta? ");
+
+			Collections.shuffle(resposta);
+			System.out.println("A)" + resposta.get(0));
+			System.out.println("B)" + resposta.get(1));
+			System.out.println("C)" + resposta.get(2));
+			System.out.println("D)" + resposta.get(3));
+
+			r = sc.next();
+
+			// (A) - número do pulo + 3
+			// (B) - número do pulo * 3
+			// (C) - número do pulo * 2
+			// (D) - número do pulo + 2
+
+			switch (r) {
+			case "a":
+			case "A":
+
+				resp = resposta.get(0);
+				break;
+			case "b":
+			case "B":
+
+				resp = resposta.get(1);
+				break;
+			case "c":
+			case "C":
+
+				resp = resposta.get(2);
+				break;
+			case "d":
+			case "D":
+
+				resp = resposta.get(3);
+				break;
+
+			default:
+				System.out.println("Alternativa inválida");
+			}
+
+			if (lul.equals(resp)) {
+				System.out.println("Resposta correta!");
+				n1 = n1 + 2;
+
+			} else {
+				System.out.println("Resposta incorreta!");
+			}
+		} while (n1 <= 1);
+
+	}
+	
+	
+	
+/*#############################################################################################################################################################
+ *                                                                                   
+ *				                █████████                                                                    
+ *				               ███████████▄▄                         
+ *				               █░░░░░░░░░░░█                         
+ *				               █░░░░█░░░█░░█                          
+ *				               █░░░░░░█░░░░█                     
+ *				               ▓▓▓▓▓▓▓▓▓▓▓▓▓▓                   
+ *				              ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                
+ *				             ▄█░░░░▓▓▓░▓▓▓░░░█▄               
+ *				           ▄▀ █░░░░▓▓░▀░▓▓░░░█▀▄                      
+ *				      ▀▀▀▄▀   █░░░░░░░░░░░░░░█  ▀▄▀▀▀                
+ *				       ▄▀ █   █░░░░░░░▀░░░░░░█  █ ▀▄                 
+ *				          ▀   █░░░░░░░░░░░░░░█  ▀                    
+ *				              █░░░░░░░▀░░░░░░█                  
+ *				              ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ 
+ * 
+ *  							  DESAFIO 2
+ * 
+ * #############################################################################################################################################################
+ */
+	
+	
+	static void imgdesafio4() {
+		System.out.println("   \n              "
+				+"              _________________________________________________________________________________________________                                                                                                           \n"+
+				"                           |                                                                                                 |  \n"+
+				"                           |   Ola alma perdida, voce veio meio socorrer? estou perdido no deserto e preciso voltar ao meu   |       \n"+
+				"                           | habitart de neve. Se consegui me ajudar ira continuar sua jornada a sua recompensa,             |             \n"+
+				"                           | caso contrario eu irei desaparecerei e vc ficara nesse deserto por toda a eternidade.           |        \n"+
+				"                           | a Charada e encontre a resposta de em quanto tempo irei derreter e o guardiao das almas         |             \n"+
+				"                           | ira permitir a nossa passagem para meu habitart.                                                |          \n"+
+				"                           |  _______________________________________________________________________________________________|          \n"+
+				"                           /                                                                                                             \n"+
+				"                ▄▄▄▄▄▄▄▄▄                         Volume             /                                                                                   \n"+
+				"                █████████                      2.400  |-------------/                                                                                              \n"+
+				"               ███████████▄▄                          |            / |                                                                                \n" + 
+				"               █░░░░░░░░░░░█                          |           /  |                                                                   \r\n" + 
+				"               █░░░░█░░░█░░█                          |          /   |                                                               \r\n" + 
+				"               █░░░░░░█░░░░█                    2.000 |---------/    |                                                               \r\n" + 
+				"               ▓▓▓▓▓▓▓▓▓▓▓▓▓▓                         |       / |    |                                                                  \r\n" + 
+				"              ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                        |      /  |    |                                                                 \r\n" + 
+				"             ▄█░░░░▓▓▓░▓▓▓░░░█▄                       |     /   |    |                                                                 \r\n" + 
+				"           ▄▀ █░░░░▓▓░▀░▓▓░░░█▀▄                      |    /    |    |                                                                \r\n" + 
+				"      ▀▀▀▄▀   █░░░░░░░░░░░░░░█  ▀▄▀▀▀                 |   /     |    |                                                               \r\n" + 
+				"       ▄▀ █   █░░░░░░░▀░░░░░░█  █ ▀▄                  |  /      |    |                                                             \r\n" + 
+				"          ▀   █░░░░░░░░░░░░░░█  ▀                     | /       |    |                                                         \r\n" + 
+				"              █░░░░░░░▀░░░░░░█                  1.000 |/        |    |                                 \r\n" + 
+				"              ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀                    ____|_________|____|_______________                                                                          \r\n" + 
+				"                                                     0|        50    75         Tempo                                                                                 \n"+
+				"\n"
+				+ "\n"
+				+ "\n"
+				+ "\n"
+				+ "\n"
+				+ "\n"
+				+ "\n"
+				+ "\n"
+				+ "\n"
+				+ "\n"
+				+ "\n"
+				+ "\n"
+				+ "\n"
+				+ "\n"
+				+ "");
+		sc.nextLine();
+	}
+
+	static void desafio2() {
+		int i = 1;
+
+		ArrayList<Integer> resp = new ArrayList<Integer>();
+
+		resp.add(20);
+		resp.add(12);
+		resp.add(6);
+		resp.add(4);
+		resp.add(2);
+
+		do {
+			i = i + 1;
+			imgdesafio4();
+			System.out.println(" Tenho 1.000 quilos de neve e o sol está me fazendo derreter de forma constante."
+					+ "\n Em cinquenta minutos mais tarde o calor irá aumentar e o seu tempo diminuir,estarei derretendo mais rápido. veja o quanto tempo tenho e resolva a questão e me ajude a sair desse deserto :"
+					+ "\n a)" + resp.get(0) + "\n b)" + resp.get(1) + "\n c)" + resp.get(2) + "\n d)" + resp.get(3)
+					+ "\n e)" + resp.get(4));
+			String escolha = sc.next();
+			switch (escolha) {
+
+			case "a":
+			case "A":
+				if (resp.get(0) == 4) {
+					System.out.println(" Parabéns Voce Acertou! ");
+					i = 3;
+				} else {
+
+					System.out.println(" Tente novamente!");
+				}
+				break;
+			case "b":
+			case "B":
+				if (resp.get(1) == 4) {
+					System.out.println(" Parabéns Voce Acertou! ");
+					i = 3;
+				} else {
+
+					System.out.println(" Tente novamente!");
+				}
+				break;
+			case "c":
+			case "C":
+				if (resp.get(2) == 4) {
+					System.out.println(" Parabéns Voce Acertou! ");
+					i = 3;
+				} else {
+
+					System.out.println(" Tente novamente!");
+				}
+				break;
+
+			case "D":
+			case "d":
+				if (resp.get(3) == 4) {
+					System.out.println(" Parabéns Voce Acertou! ");
+					i = 3;
+				} else {
+
+					System.out.println(" Tente novamente!");
+				}
+				break;
+			case "e":
+			case "E":
+				if (resp.get(4) == 4) {
+					System.out.println(" Parabéns Voce Acertou! ");
+					i = 3;
+				} else {
+
+					System.out.println(" Tente novamente!");
+				}
+
+			default:
+
+				System.out.println(" Opcao Invalida!");
+				i = 3;
+			}
+			Collections.shuffle(resp);
+		} while (i < 3);
+
+	}
+
+	
+/*#############################################################################################################################################################
+ * 			    	          ▄▀▄     ▄▀▄ 
+ *					         ▄█░░▀▀▀▀▀░░█▄ 
+ *					     ▄▄  █░░░░░░░░░░░█  ▄▄ 
+ *					    █  █ █░░▀░░┬░░▀░░█ █  █ 
+ *					  ▄▄███████████████████████▄▄ 
+ *					 █▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█ 
+ *					█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█ 
+ *					█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█ 
+ *					█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█ 
+ *					████████████████████████████████
+ * 
+ *  					        DESAFIO 3
+ * 
+ * #############################################################################################################################################################
+ */
 		static void imgdesafio3() {
 			System.out.println("\n "
 					+ "         ▄▀▄     ▄▀▄\r\n" + 
@@ -673,34 +750,61 @@ public class RessurrectionGom {
 					+ "");
 			sc.nextLine();
 		}
-		static void imgdesafio4() {
-			System.out.println("   \n              "
-					+"              _________________________________________________________________________________________________                                                                                                           \n"+
-					"                           |                                                                                                 |  \n"+
-					"                           |   Ola alma perdida, voce veio meio socorrer? estou perdido no deserto e preciso voltar ao meu   |       \n"+
-					"                           | habitart de neve. Se consegui me ajudar ira continuar sua jornada a sua recompensa,             |             \n"+
-					"                           | caso contrario eu irei desaparecerei e vc ficara nesse deserto por toda a eternidade.           |        \n"+
-					"                           | a Charada e encontre a resposta de em quanto tempo irei derreter e o guardiao das almas         |             \n"+
-					"                           | ira permitir a nossa passagem para meu habitart.                                                |          \n"+
-					"                           |  _______________________________________________________________________________________________|          \n"+
-					"                           /                                                                                                             \n"+
-					"                ▄▄▄▄▄▄▄▄▄                         Volume             /                                                                                   \n"+
-					"                █████████                      2.400  |-------------/                                                                                              \n"+
-					"               ███████████▄▄                          |            / |                                                                                \n" + 
-					"               █░░░░░░░░░░░█                          |           /  |                                                                   \r\n" + 
-					"               █░░░░█░░░█░░█                          |          /   |                                                               \r\n" + 
-					"               █░░░░░░█░░░░█                    2.000 |---------/    |                                                               \r\n" + 
-					"               ▓▓▓▓▓▓▓▓▓▓▓▓▓▓                         |       / |    |                                                                  \r\n" + 
-					"              ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                        |      /  |    |                                                                 \r\n" + 
-					"             ▄█░░░░▓▓▓░▓▓▓░░░█▄                       |     /   |    |                                                                 \r\n" + 
-					"           ▄▀ █░░░░▓▓░▀░▓▓░░░█▀▄                      |    /    |    |                                                                \r\n" + 
-					"      ▀▀▀▄▀   █░░░░░░░░░░░░░░█  ▀▄▀▀▀                 |   /     |    |                                                               \r\n" + 
-					"       ▄▀ █   █░░░░░░░▀░░░░░░█  █ ▀▄                  |  /      |    |                                                             \r\n" + 
-					"          ▀   █░░░░░░░░░░░░░░█  ▀                     | /       |    |                                                         \r\n" + 
-					"              █░░░░░░░▀░░░░░░█                  1.000 |/        |    |                                 \r\n" + 
-					"              ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀                    ____|_________|____|_______________                                                                          \r\n" + 
-					"                                                     0|        50    75         Tempo                                                                                 \n"+
+		
+			
+			
+/*#############################################################################################################################################################
+ * 					░▄████░▀▄░░░░░░░▄▀░█████▄░           
+ *					████▀█▀▄█████████▄▀█▀████░                             
+ *					▀▀░▀▄█████▀▀▀▀▀░▀███▄▀░▀▀░                        
+ *					░░░░████▀▄░░██░░▄░███░░░░░                
+ *					░░░▄███▀▄▀▀░▀▀░▀▀▄▀██▄░░░░                         
+ *					░▄▄████░███▄░░▄███░███▄▄░░                          
+ *					░░█████░░▀▀░░░░▀▀░░████░░░                                    
+ *					░░░▀▀███▄░▀▄▀▀▄▀░▄██▀▀░░░░           
+ *					░░░░░░░░░▀▄▄░░▄▄█░░░░░░░░░           
+ *					░░░░░░░░▄▀▀▄▀▀▄▀▀▄░░░░░░░░        
+ *					░▄▄▄▄▄▀▀▀██░▄▄░██▀▀▀▄▄▄▄▄░        
+ *					▀▄▄▀░░░▄▀█▀█▀▀█▀█▀▄░░░▀▄▄▀       
+ *					░░▄▄▄▄▀▄█▀░▄░░▄░▀█▄▀▄▄▄▄░░        
+ *					░▀▄▄▀░▄▀█░░▄▄▄▄░░█▀▄░▀▄▄▀░       
+ *					░░░░░█▀▄░▀▄▀░░▀▄▀░▄▀█░░░░░         
+ *					░░░░░█▄▀░░█▄░░▄█░░▀▄█░░░░░           
+ *					░░░░░░░░░▄█▀░░▀█▄░░░░░░░░░ 
+ * 
+ *  					 DESAFIO 4
+ * 
+ * #############################################################################################################################################################
+ */
+
+		static void imgdesafio2() {
+			System.out.println("\n"
+					+"                           ______________________________________________________________________                                             \n"+
+					"                          |                                                                      |\n"+
+					 "                          | - Olá criatura desprezível, está preparado para  uma morte terrível? |                                             \n" + 
+					"                          |    Sou a KumoKumo  mas pode me chamar de presságio do seu horror     |                                        \n"+
+					 "                          /   ___________________________________________________________________|                                                                                                                   \n"+
+					"                         /                          \\_*_____/                                                                                   \r\n" + 
+					"                                                    /\\*_|__/\\                                                                                   \n"+
+					"░▄████░▀▄░░░░░░░▄▀░█████▄░                         / /\\_|*/\\ \\                                                                                \r\n" +
+					"████▀█▀▄█████████▄▀█▀████░                       _/_/_/\\|/\\_*_\\_                                                                              \n"+
+					"▀▀░▀▄█████▀▀▀▀▀░▀███▄▀░▀▀░                        \\ \\ \\/|\\* / /                                                                               \r\n" + 
+					"░░░░████▀▄░░██░░▄░███░░░░░                         * \\/_|*\\/ /                                                                                 \n"+
+					"░░░▄███▀▄▀▀░▀▀░▀▀▄▀██▄░░░░                          \\/__|__\\/         \\*__*_|_*___/                                                             \r\n" + 
+					"░▄▄████░███▄░░▄███░███▄▄░░                          /       \\         /\\____|____/\\                                                             \r\n" + 
+					"░░█████░░▀▀░░░░▀▀░░████░░░                                           / /\\___|__*/\\ \\                                                           \r\n" + 
+					"░░░▀▀███▄░▀▄▀▀▄▀░▄██▀▀░░░░           \\____|____/                    / * /\\_*|__/\\ \\ \\                                                            \r\n" + 
+					"░░░░░░░░░▀▄▄░░▄▄█░░░░░░░░░           *\\___|_*_/\\                   / / / /\\_|_/\\ * \\ \\                                                             \r\n" + 
+					"░░░░░░░░▄▀▀▄▀▀▄▀▀▄░░░░░░░░          / /\\*_|_ /\\ \\               __/_*_/_/*/\\|/*_\\_\\_*_\\_                                                                  \r\n" + 
+					"░▄▄▄▄▄▀▀▀██░▄▄░██▀▀▀▄▄▄▄▄░         / / /\\_|_/\\ \\ \\                \\ * \\ \\ \\/|\\/ / / / /                                                             \r\n" + 
+					"▀▄▄▀░░░▄▀█▀█▀▀█▀█▀▄░░░▀▄▄▀      __/_/_*_/\\|/\\_\\_\\*\\__              \\ \\ \\ \\/_|_\\/ * / /                                                              \r\n" + 
+					"░░▄▄▄▄▀▄█▀░▄░░▄░▀█▄▀▄▄▄▄░░        \\ \\ \\ \\/|\\/ / / /                 * \\ \\/__|__\\/ / /                                                             \r\n" + 
+					"░▀▄▄▀░▄▀█░░▄▄▄▄░░█▀▄░▀▄▄▀░         * \\ \\/_|_\\/ * /                   \\ */___|_*_\\/ /                                                           \r\n" + 
+					"░░░░░█▀▄░▀▄▀░░▀▄▀░▄▀█░░░░░          \\ \\/__|*_\\/ /                     \\/_*__|____\\*                                                            \r\n" + 
+					"░░░░░█▄▀░░█▄░░▄█░░▀▄█░░░░░           \\/_*_|___\\/                      /     |     \\                                                            \r\n" + 
+					"░░░░░░░░░▄█▀░░▀█▄░░░░░░░░░           /    |    \\                                                                                                  \r\n" + 
 					"\n"
+					+ "\n"
 					+ "\n"
 					+ "\n"
 					+ "\n"
@@ -718,46 +822,35 @@ public class RessurrectionGom {
 			sc.nextLine();
 		}
 		
-		static int desafioboneco() {
-			int fase =  0;
-			String escolha;
-			int cont = 1;
-			
-			System.out.println(" Informe sua resposta : ");
-			escolha = sc.next();
-			do {
-				System.out.println(" Em quantos litros por minuto, o derretimento do boneco? ");
-				
-				switch (escolha) {
-				
-				case "a":
-				case "A":
-				case "b":
-				case "B":
-				case "c":	
-				case "C":
-				case "e":
-				case "E":
-					System.out.println(" Voce Errou... ");
-					gameOver();
-					break;
-				case "D" :
-				case "d" :
-					cont = 3;
-					fase = 4;
-					break;
-					
-				default : 
-					
-					System.out.println(" Opcao Invalida!");
-				}
-					
-			}while(cont<=2);
-			
-			return fase;
-			
-			
-		}
+		
+/*#############################################################################################################################################################
+ * 	
+ * 			        █████████████▀▀▀▀▀███████▀▀▀▀▀█████████████ 
+ *					█████████▀░░▀▀█▄▄▄▄▄▄██▄▄▄▄▄▄█▀░░▀█████████ 
+ *					████████▄░░▄▄████▀▀▀▀▀▀▀▀▀████▄▄░░▄████████ 
+ *					████▀▀▀▀█████▀░░░░░░░░░░░░░░░▀█████▀▀▀▀████
+ *					██▀░░░░░░██▀░░░░░░██░░░██░░░░░░▀██░░░░░░▀██
+ *					█░░░▀▀▀▀███░░░░░░░██░░░██░░░░░░░███▀▀▀▀░░░█ 
+ *					█▄▄░░░░░░██░░░░▄░░▀▀░░░▀▀░░▄░░░░██░░░░░░▄▄█ 
+ *					████▄░░░░▀██░░░░███████████░░░░██▀░░░░▄████
+ *					██████████▀██▄░░░▀███████▀░░░▄██▀██████████ 
+ *					███████▀░░░████▄▄░░░░░░░░░▄▄████░░░▀███████ 
+ *					██████░░░▄▀░░▀▀▀███████████▀▀▀░░▀▄░░░██████ 
+ *					██████░░░▀░░░░░░░░▄▄▄█▄▄▄░░░░░░░░▀░░░██████ 
+ *					████████▄▄▄▄▄▄███████████████▄▄▄▄▄▄████████ 
+ *					██████████████████▀░░▀█████████████████████ 
+ *					█████████████████▀░░░▄█████████████████████
+ *					█████████████████░░░███████████████████████ 
+ *					██████████████████░░░▀█████████████████████ 
+ *					███████████████████▄░░░████████████████████ 
+ *					█████████████████████░░░███████████████████
+ * 
+ *  					              DESAFIO 5
+ * 
+ * #############################################################################################################################################################	
+*/	
+		
+		
 		
 		static void imgdesafio5() {
 			System.out.println("\n"
