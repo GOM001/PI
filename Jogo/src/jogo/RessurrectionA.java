@@ -18,7 +18,7 @@ public class RessurrectionA {
 		
 	do {
 	i = i+1;
-	desafio4.imgboneco();
+	//desafio4.imgboneco();
 	System.out.println(" Tenho 1.000 quilos de neve e o sol está me fazendo derreter de forma constante."+
 	"\n Em cinquenta minutos mais tarde o calor irá aumentar e o seu tempo diminuir,estarei derretendo mais rápido. veja o quanto tempo tenho e resolva a questão e me ajude a sair desse deserto :"+
 			"\n a)"+resp.get(0)+"\n b)"+resp.get(1)+"\n c)"+resp.get(2)+"\n d)"+resp.get(3)+"\n e)"+resp.get(4));

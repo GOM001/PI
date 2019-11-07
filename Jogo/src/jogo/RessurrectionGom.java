@@ -1,5 +1,7 @@
 package jogo;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class RessurrectionGom {
@@ -274,6 +276,7 @@ public class RessurrectionGom {
  * 
  * #############################################################################################################################################################
  */
+		
 		//METODO ENCONTRAR POSIÇÃO LIVRE EM LOGIN
 		static int posicaoLivre() {
 			for (int i = 0; i < login.length; i++) {
@@ -292,7 +295,8 @@ public class RessurrectionGom {
 			int faseAtual = fase[posicaoLogin];
 			switch (faseAtual) {
 			case 0:
-				imgdesafio1();
+				desafio1();
+				desafio4();
 				break;
 
 			default:
@@ -340,6 +344,157 @@ public class RessurrectionGom {
  * #############################################################################################################################################################
  */	
 		
+///////////////////////////////////////// PRIMEIRO DESAFIO DO JOGO /////////////////////////////////
+
+	static void desafio1() {
+
+		String r = "";
+		String resp = "";
+		String lul = "número do pulo + 2";
+		int n1 = 0;
+		ArrayList<String> resposta = new ArrayList<String>();
+		resposta.add("número do pulo + 3");
+		resposta.add("número do pulo * 3");
+		resposta.add("número do pulo * 2");
+		resposta.add("número do pulo + 2"); // como não sei qual é a resposta correta levei que seria essa
+
+		do {
+			System.out.println("Qual alternativa está correta? ");
+
+			Collections.shuffle(resposta);
+			System.out.println("A)" + resposta.get(0));
+			System.out.println("B)" + resposta.get(1));
+			System.out.println("C)" + resposta.get(2));
+			System.out.println("D)" + resposta.get(3));
+
+			r = sc.next();
+
+			// (A) - número do pulo + 3
+			// (B) - número do pulo * 3
+			// (C) - número do pulo * 2
+			// (D) - número do pulo + 2
+
+			switch (r) {
+			case "a":
+			case "A":
+
+				resp = resposta.get(0);
+				break;
+			case "b":
+			case "B":
+
+				resp = resposta.get(1);
+				break;
+			case "c":
+			case "C":
+
+				resp = resposta.get(2);
+				break;
+			case "d":
+			case "D":
+
+				resp = resposta.get(3);
+				break;
+
+			default:
+				System.out.println("Alternativa inválida");
+			}
+
+			if (lul.equals(resp)) {
+				System.out.println("Resposta correta!");
+				n1 = n1 + 2;
+
+			} else {
+				System.out.println("Resposta incorreta!");
+			}
+		} while (n1 <= 1);
+
+	}
+	
+///////////////////////////////////////// SEGUNDO DESAFIO DO JOGO /////////////////////////////////
+
+	static void desafio4() {
+		int i = 1;
+
+		ArrayList<Integer> resp = new ArrayList<Integer>();
+
+		resp.add(20);
+		resp.add(12);
+		resp.add(6);
+		resp.add(4);
+		resp.add(2);
+
+		do {
+			i = i + 1;
+			imgdesafio4();
+			System.out.println(" Tenho 1.000 quilos de neve e o sol está me fazendo derreter de forma constante."
+					+ "\n Em cinquenta minutos mais tarde o calor irá aumentar e o seu tempo diminuir,estarei derretendo mais rápido. veja o quanto tempo tenho e resolva a questão e me ajude a sair desse deserto :"
+					+ "\n a)" + resp.get(0) + "\n b)" + resp.get(1) + "\n c)" + resp.get(2) + "\n d)" + resp.get(3)
+					+ "\n e)" + resp.get(4));
+			String escolha = sc.next();
+			switch (escolha) {
+
+			case "a":
+			case "A":
+				if (resp.get(0) == 4) {
+					System.out.println(" Parabéns Voce Acertou! ");
+					i = 3;
+				} else {
+
+					System.out.println(" Tente novamente!");
+				}
+				break;
+			case "b":
+			case "B":
+				if (resp.get(1) == 4) {
+					System.out.println(" Parabéns Voce Acertou! ");
+					i = 3;
+				} else {
+
+					System.out.println(" Tente novamente!");
+				}
+				break;
+			case "c":
+			case "C":
+				if (resp.get(2) == 4) {
+					System.out.println(" Parabéns Voce Acertou! ");
+					i = 3;
+				} else {
+
+					System.out.println(" Tente novamente!");
+				}
+				break;
+
+			case "D":
+			case "d":
+				if (resp.get(3) == 4) {
+					System.out.println(" Parabéns Voce Acertou! ");
+					i = 3;
+				} else {
+
+					System.out.println(" Tente novamente!");
+				}
+				break;
+			case "e":
+			case "E":
+				if (resp.get(4) == 4) {
+					System.out.println(" Parabéns Voce Acertou! ");
+					i = 3;
+				} else {
+
+					System.out.println(" Tente novamente!");
+				}
+
+			default:
+
+				System.out.println(" Opcao Invalida!");
+				i = 3;
+			}
+			Collections.shuffle(resp);
+		} while (i < 3);
+
+	}
+
 		static void imgdesafio1() {
 			
 			System.out.println("\n"

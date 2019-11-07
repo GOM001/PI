@@ -1,4 +1,6 @@
 package jogo;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 
@@ -289,7 +291,8 @@ public class Ressurrection {
 	
 	static void desafio4() {
 			int i = 1;
-		List<Integer> resp = new ArrayList<Integer>();
+			
+		ArrayList<Integer> resp = new ArrayList<Integer>();
 		
 		resp.add(20);
 		resp.add(12);
@@ -741,8 +744,6 @@ static void gameOver() {
 	
 
 	public static void main(String[] args) {
-	String [] login =  new String [5];
-	int [] fase = new int [5];
 	zero();
 	introducao();
 	imgdesafio1();
