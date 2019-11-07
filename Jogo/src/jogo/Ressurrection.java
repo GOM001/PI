@@ -13,6 +13,11 @@ public class Ressurrection {
  * 
  *#############################################################################################################################################################
  */
+		//VARIÁVEIS EM ESCOPO GLOBAL
+		static String [] login =  new String [5];
+		static int [] fase = new int [5];
+	
+	
 		//DEFINIÇÃO ESTÁTICA DO MÉTODO SCANNER
 		static Scanner sc = new Scanner (System.in);
 		
@@ -47,10 +52,10 @@ public class Ressurrection {
  * #############################################################################################################################################################
  */
 		// MÉTODO PARA VERIFICAR SE HÁ ALGUM JOGO SALVO
-		static int controlador(String [] login, int [] faze) {
+		static int controlador(String [] login, int [] fase) {
 			int salvo = 0;
-			for (int i = 0; i < faze.length; i++) {
-				if (faze[i] > 0) {
+			for (int i = 0; i < fase.length; i++) {
+				if (fase[i] > 0) {
 					salvo = 1;
 				}
 			}
@@ -59,7 +64,6 @@ public class Ressurrection {
 		
 		
 		//MÉTODO PARA CHAMAR INICIO E MENU (ZERO)
-		
 		static void zero() {
 			int parada = 0;
 			do {
@@ -578,7 +582,7 @@ static void gameOver() {
 
 	public static void main(String[] args) {
 	String [] login =  new String [5];
-	int [] faze = new int [5];
+	int [] fase = new int [5];
 	zero();
 	introducao();
 	imgdesafio1();
