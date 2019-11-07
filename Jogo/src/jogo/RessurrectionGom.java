@@ -54,7 +54,10 @@ public class RessurrectionGom {
 
 			//MÉTODO PARA CHAMAR INICIO E MENU (ZERO)
 			static void zero() {
-				fase[0] = 5;
+				login[0] = "GOM";
+				login[3] = "GOMGod";
+				fase[0] = 1;
+				System.out.println(login[0]);
 				int parada = 0;
 				do {
 					inicio();
@@ -110,7 +113,7 @@ public class RessurrectionGom {
 		
 		// MENU INICIAL DO JOGO
 		static int menu () {
-			int parada = 0; //Variável de Retorno da função para parar o jogo
+			int parada = 0; //VARIÁVEL DA FUNÇÃO PARADA PARA O JOGO
 			int salve = controlador(login, fase);
 			if (salve == 0){
 			String opcao = opcoes1();
@@ -122,6 +125,7 @@ public class RessurrectionGom {
 						centro(15);
 						System.out.println("Você escolheu a opção Jogar");
 						centro(17);
+						jogar();
 						break;
 					case "3":
 						creditos();
@@ -259,19 +263,42 @@ public class RessurrectionGom {
  * 
  * 
  * 
- *  								CENAS DO JOGO
+ *  								METODOS PARA O JOGO
  *  
  * 
  * 
  * #############################################################################################################################################################
- */		
-		static void jogar() {
-			System.out.println("Jogar");
+ */
+		//METODO ENCONTRAR POSIÇÃO LIVRE EM LOGIN
+		static int posicaoLivre() {
+			for (int i = 0; i < login.length; i++) {
+				if (login[i] == null){
+					return i;
+				}
+			}
+			return -1;
 		}
 		
+		// METODO JOGAR
+		static void jogar() {
+			System.out.println("Jogar");
+			int posicaoLogin = posicaoLivre();
+			String loginAtual = login[posicaoLogin];
+			int faseAtual = fase[posicaoLogin];
+		}
 		
+		//METODO CONTINUAR JOGO
 		static void continuarJogo() {
+			centro(15);
 			System.out.println("Continuar Jogo");
+			System.out.printf(
+			"\n						Selecione o Jogador"+
+			"\n							1 - "+ login[0]+
+			"\n							2 - "+ login[1]+
+			"\n							3 - "+ login[2]+
+			"\n							4 - "+ login[3]+
+			"\n							5 - "+ login[4]);
+			centro(15);
 		}
 		
 		
@@ -283,6 +310,19 @@ public class RessurrectionGom {
 			
 			
 		}
+		
+		
+/*#############################################################################################################################################################
+ * 
+ * 
+ * 
+ * 
+ *  								CENAS DO JOGO
+ *  
+ * 
+ * 
+ * #############################################################################################################################################################
+ */	
 		
 		static void imgdesafio1() {
 			
