@@ -8,7 +8,7 @@ public class RessurrectionA {
 	 
 	static void play4() {
 		int i = 1;
-	ArraysList<Integer> resp = new ArrayList<Integer>();
+	ArrayList<Integer> resp = new ArrayList<Integer>();
 	
 	resp.add(20);
 	resp.add(12);
@@ -93,7 +93,7 @@ public class RessurrectionA {
 	}
 	static void play5() {
 		int i = 1;
-		ArraysList<Integer> resp = new ArrayList<Integer>();
+		ArrayList<Integer> resp = new ArrayList<Integer>();
 		 resp.add(20);
 		 resp.add(14);
 		 resp.add(22);
@@ -175,6 +175,7 @@ public class RessurrectionA {
 
 	public static void main(String[] args) {
 	play4();
+	play5();	
 	Ressurrection.gameOver();
 	}
 
