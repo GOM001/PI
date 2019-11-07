@@ -7,17 +7,17 @@ public class Ressurrection {
  * 
  * 
  * 
- * Métodos de Base com Grande Ultilização
+ * 								MÉTODOS DE BASE COM GRANDE UTILIZAÇÃO
  * 
  * 
  * 
  *#############################################################################################################################################################
  */
-		// definição Estática do método Scanner
+		//DEFINIÇÃO ESTÁTICA DO MÉTODO SCANNER
 		static Scanner sc = new Scanner (System.in);
 		
 		
-		// Método Para Definir Quantidade de Linhas a Pular
+		// MÉTODO PARA DEFINIR QUANTIDADE DE LINHAS PULADAS
 		static void centro(int n) {
 			for (int i = 0; i < n; i++) {
 				System.out.print("\n");
@@ -25,13 +25,13 @@ public class Ressurrection {
 		}
 		
 		
-		// Método para clicar em enter para continuar
+		//MÉTODO PARA DIGITAR ENTER PARA CONTINAR
 		static void continuar() {
 			System.out.println(" Digite Enter para continuar\n");
 			sc.nextLine();
 		}
 		
-		// Método para clicar em enter para continuar sem texto
+		//MÉTODO PARA DRIBLAR FALHA NO CONTINUAR
 				static void drible() {
 					sc.nextLine();
 				}
@@ -40,13 +40,13 @@ public class Ressurrection {
  * 
  * 
  * 
- * 											INICIO DO JOGO E MENU
+ * 									INICIO DO JOGO E MENU
  * 
  * 
  * 
  * #############################################################################################################################################################
  */
-		// Método para controlar a faze em quem o usuário Inicia
+		// MÉTODO PARA VERIFICAR SE HÁ ALGUM JOGO SALVO
 		static int controlador(String [] login, int [] faze) {
 			int salvo = 0;
 			for (int i = 0; i < faze.length; i++) {
@@ -58,7 +58,7 @@ public class Ressurrection {
 		}
 		
 		
-		//Método de Chamada do Inicio e Menu (Zero)
+		//MÉTODO PARA CHAMAR INICIO E MENU (ZERO)
 		
 		static void zero() {
 			int parada = 0;
@@ -81,7 +81,7 @@ public class Ressurrection {
 		}
 		
 		
-		// Método de inicio do Jogo
+		//MÉTODO PARA INICIO DO JOGO
 		static void inicio() {
 				centro(1);
 				System.out.println("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n"
@@ -118,7 +118,7 @@ public class Ressurrection {
 		}
 
 		
-		// Método Menu
+		// MENU INICIAL DO JOGO
 		static int menu () {
 			int parada = 0; //Variável de Retorno da função para parar o jogo
 			int opcao = opcoes1();
@@ -162,7 +162,7 @@ public class Ressurrection {
  * 
  * #############################################################################################################################################################
  */
-			
+		//OPÇÕES DO MENU
 		static int opcoes1() {
 			int opcao;
 			centro(14);
@@ -179,7 +179,7 @@ public class Ressurrection {
 			return opcao;
 		}
 		
-		
+		// CRÉDITOS
 		static void creditos() {
 			centro(15);
 			System.out.println("\nVocê escolheu a opção Créditos\n\n"+
@@ -188,6 +188,7 @@ public class Ressurrection {
 			centro(19);
 		}
 		
+		//INSTRUÇÕES DO JOGO
 		static void instrucao() {
 			centro(15);
 			System.out.println(
@@ -203,7 +204,8 @@ public class Ressurrection {
  * 
  * 
  * 
- *  											CENAS DO JOGO
+ *  								CENAS DO JOGO
+ *  
  * 
  * 
  * #############################################################################################################################################################
