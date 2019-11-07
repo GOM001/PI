@@ -214,6 +214,82 @@ public class Ressurrection {
  * 
  * #############################################################################################################################################################
  */		
+	
+	///////////////////////////////////////// PRIMEIRO DESAFIO DO JOGO /////////////////////////////////
+		
+		static void Desafio1() {
+			
+			String r = "";
+			String resp="";
+			String lul = "número do pulo + 2";
+			int n1=0;
+			ArrayList<String> resposta = new ArrayList<String>();
+			resposta.add("número do pulo + 3");
+			resposta.add("número do pulo * 3");
+			resposta.add("número do pulo * 2");
+			resposta.add("número do pulo + 2"); // como não sei qual é a resposta correta levei que seria essa
+			
+			do {
+			System.out.println("Qual alternativa está correta? ");
+
+			Collections.shuffle(resposta);
+			System.out.println("A)"+ resposta.get(0));
+			System.out.println("B)"+ resposta.get(1));
+			System.out.println("C)"+ resposta.get(2));
+			System.out.println("D)"+ resposta.get(3));
+			
+			r= sc.next();
+
+			//(A) - número do pulo + 3
+			//(B) - número do pulo * 3
+			//(C) - número do pulo * 2
+			//(D) - número do pulo + 2
+
+
+
+
+			switch(r) {
+			case "a":
+			case "A":
+
+			resp= resposta.get(0);
+			break;
+			case "b":
+			case "B":
+
+			resp= resposta.get(1);
+			break;
+			case "c":
+			case "C":
+
+			resp= resposta.get(2);
+			break;
+			case "d":
+			case "D":
+
+			resp= resposta.get(3);
+			break;
+			
+			default:
+			System.out.println("Alternativa inválida");
+			}
+
+			if(lul.equals(resp)) {
+			System.out.println("Resposta correta!");
+			n1=n1+2;
+
+			}else {
+			System.out.println("Resposta incorreta!");
+			}
+			}while(n1 <= 1);
+
+
+
+			}
+	
+	
+	
+	
 		
 		
 		
