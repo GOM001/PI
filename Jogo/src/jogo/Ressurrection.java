@@ -3,8 +3,19 @@ import java.util.Scanner;
 
 
 public class Ressurrection {
+/*#############################################################################################################################################################
+ * 
+ * 
+ * 
+ * Métodos de Base com Grande Ultilização
+ * 
+ * 
+ * 
+ *#############################################################################################################################################################
+ */
 		// definição Estática do método Scanner
 		static Scanner sc = new Scanner (System.in);
+		
 		
 		// Método Para Definir Quantidade de Linhas a Pular
 		static void centro(int n) {
@@ -13,9 +24,43 @@ public class Ressurrection {
 			}
 		}
 		
+		
+		// Método para clicar em enter para continuar
+		static void continuar() {
+			System.out.println(" Digite Enter para continuar\n");
+			sc.nextLine();
+		}
+		
+		// Método para clicar em enter para continuar sem texto
+				static void drible() {
+					sc.nextLine();
+				}
+		
+/* #############################################################################################################################################################
+ * 
+ * 
+ * 
+ * 											INICIO DO JOGO E MENU
+ * 
+ * 
+ * 
+ * #############################################################################################################################################################
+ */
+		// Método para controlar a faze em quem o usuário Inicia
+		static int controlador(String [] login, int [] faze) {
+			int salvo = 0;
+			for (int i = 0; i < faze.length; i++) {
+				if (faze[i] > 0) {
+					salvo = 1;
+				}
+			}
+			return salvo;
+		}
+		
+		
 		// Método de inicio do Jogo
 		static void inicio() {
-				System.out.println("\n");
+				centro(1);
 				System.out.println("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n"
 						+"░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░¶¶¶¶¶¶¶░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n" +
 						"░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░¶_____¶░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n" + 
@@ -45,9 +90,8 @@ public class Ressurrection {
 						"░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n" + 
 						"░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n" + 
 						"");
-				centro(7);
-			System.out.println(" Digite Enter para continuar");
-			sc.nextLine();				
+			centro(4);
+			continuar();				
 		}
 
 		
@@ -62,7 +106,7 @@ public class Ressurrection {
 					case 2:
 						centro(15);
 						System.out.println("Você escolheu a opção Jogar");
-						centro(19);
+						centro(17);
 						break;
 					case 3:
 						creditos();
@@ -70,11 +114,10 @@ public class Ressurrection {
 					case 4:
 						centro(15);
 						System.out.println("								Você escolheu a opção Sair");
-						centro(4);
-						sc.nextLine();
+						centro(1);
 						System.out.println("								Tecle Enter para confirmar");
-						centro(13);
-						sc.nextLine();
+						centro(16);
+						drible();
 						parada = 4;
 						break;
 					default:
@@ -86,7 +129,7 @@ public class Ressurrection {
 			return parada;
 		}
 			
-/*
+/*#############################################################################################################################################################
  * 
  * 
  * 
@@ -94,7 +137,7 @@ public class Ressurrection {
  * 
  * 
  * 
- * 
+ * #############################################################################################################################################################
  */
 			
 		static int opcoes1() {
@@ -108,7 +151,7 @@ public class Ressurrection {
 			"								4 - Sair          \n" +
 			"								Escolha uma opção:\n"
 									);
-			centro(19);
+			centro(14);
 			opcao = sc.nextInt();
 			return opcao;
 		}
@@ -129,7 +172,7 @@ public class Ressurrection {
 			"    Ressurection e um RPG que se passa em um mundo espiritual;\n " +
 			"    Onde suas escolhas podem mudar o seu caminho para sempre. Pense bem antes delas!\n\n");
 							
-			centro(19);
+			centro(17);
 		}
 		
 		//Método de Chamada do Inicio e Menu (Zero)
@@ -142,18 +185,19 @@ public class Ressurrection {
 				parada = menu();
 				if(parada != 4) {
 				sc.nextLine();
-				System.out.println("\n" +
-								   "\n" +
-								   "\n" +
-								   "Tecle Enter Para Voltar ao Menu Inicial" +
+				System.out.println("Tecle Enter Para Voltar ao Menu Inicial" +
 								   "\n");
 				sc.nextLine();
 				}
 				}while(parada != 4);
-			}while(parada ==4);
+			}while(parada == 4);
 		}
 		
-/*
+		static void zeroSave() {
+			
+		}
+		
+/*#############################################################################################################################################################
  * 
  * 
  * 
@@ -161,7 +205,7 @@ public class Ressurrection {
  *  A partir deste ponto iniciamse os Métodos que representam as Cenas do Jogos
  * 
  * 
- * 
+ * #############################################################################################################################################################
  */		
 		
 		
@@ -530,7 +574,8 @@ static void gameOver() {
 	
 
 	public static void main(String[] args) {
-		
+	String [] login =  new String [5];
+	int [] faze = new int [5];
 	zero();
 	introducao();
 	imgdesafio1();
