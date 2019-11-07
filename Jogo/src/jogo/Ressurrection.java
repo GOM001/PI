@@ -58,6 +58,29 @@ public class Ressurrection {
 		}
 		
 		
+		//Método de Chamada do Inicio e Menu (Zero)
+		
+		static void zero() {
+			int parada = 0;
+			do {
+				inicio();
+				do {
+				parada = menu();
+				if(parada != 4) {
+				sc.nextLine();
+				System.out.println("Tecle Enter Para Voltar ao Menu Inicial" +
+								   "\n");
+				sc.nextLine();
+				}
+				}while(parada != 4);
+			}while(parada == 4);
+		}
+		
+		static void zeroSave() {
+			
+		}
+		
+		
 		// Método de inicio do Jogo
 		static void inicio() {
 				centro(1);
@@ -133,7 +156,7 @@ public class Ressurrection {
  * 
  * 
  * 
- * Métodos Do Menu
+ * 								MÉTODOS COM O CONTEÚDO DO MENU
  * 
  * 
  * 
@@ -175,34 +198,12 @@ public class Ressurrection {
 			centro(17);
 		}
 		
-		//Método de Chamada do Inicio e Menu (Zero)
-		
-		static void zero() {
-			int parada = 0;
-			do {
-				inicio();
-				do {
-				parada = menu();
-				if(parada != 4) {
-				sc.nextLine();
-				System.out.println("Tecle Enter Para Voltar ao Menu Inicial" +
-								   "\n");
-				sc.nextLine();
-				}
-				}while(parada != 4);
-			}while(parada == 4);
-		}
-		
-		static void zeroSave() {
-			
-		}
-		
 /*#############################################################################################################################################################
  * 
  * 
  * 
  * 
- *  A partir deste ponto iniciamse os Métodos que representam as Cenas do Jogos
+ *  											CENAS DO JOGO
  * 
  * 
  * #############################################################################################################################################################
