@@ -468,7 +468,37 @@ public class RessurrectionGom {
 				+ "");
 		
 		sc.nextLine();
-		}	
+		}
+		
+	static void imgDesafio1Complemento() {
+		centro(3);
+		System.out.println(
+				"                  _____________________________________________________________________________________    \n "+
+				"                 |                                                                                     |                               \n"+ 
+				"                 |   As firmes madeiras estão sempre em par porém entre elas você terá que pular,      |                                \n" + 
+				"                 |  preste atenção em como separadas estão e selecion e então a correta opção.         |                             \n" + 
+				"                 |   __________________________________________________________________________________|                                                       \n"+
+				"                  /                                                                                                                                      \n"+
+				"                /                                   \n" + 
+				"                                                                                                           \n" + 
+				"                                                                                                                               \n"+
+				" ░░░░░▄▄▀▀▀▀▀▀▀▀▀▄▄░░░░░          01     02      03      04     05      06      07     08      09                                                                      \n" + 
+				" ░░░░█░░░░░░░░░░░░░█░░░░                                                                                                                           \n"+
+				" ░░░█░░░░░░░░░░▄▄▄░░█░░░                                                                                            \n" + 
+				" ░░░█░░▄▄▄░░▄░░███░░█░░░                                                                                                                             \n"+
+				" ░░░▄█░▄░░░▀▀▀░░░▄░█▄░░░                                                                                                  \n" + 
+				" ░░░█░░▀█▀█▀█▀█▀█▀░░█░░░        ██████ ██████  ██████  ██████ ██████  ██████  ██████ ██████  ██████                                                                                         \n"+
+				" ░░░▄██▄▄▀▀▀▀▀▀▀▄▄██▄░░░        ██████ ██████          ██████ ██████  ██████  ██████ ██████  ██████                                                           \n" + 
+				" ░▄█░█▀▀█▀▀▀█▀▀▀█▀▀█░█▄░        ██████ ██████  ██████  ██████ ██████          ██████ ██████                                                                                       \n"+
+				" ▄▀░▄▄▀▄▄▀▀▀▄▀▀▀▄▄▀▄▄░▀▄        ██████ ██████  ██████  ██████ ██████          ██████ ██████  ██████                                                           \n" + 
+				" █░░░░▀▄░█▄░░░▄█░▄▀░░░░█        ██████ ██████          ██████ ██████  ██████  ██████ ██████  ██████                                                                       \n"+
+				" ░▀▄▄░█░░█▄▄▄▄▄█░░█░▄▄▀░        ██████ ██████          ██████ ██████  ██████  ██████ ██████                                                        \n" + 
+				" ░░░▀██▄▄███████▄▄██▀░░░        ██████ ██████  ██████  ██████ ██████          ██████ ██████                                                                 \n"+
+				" ░░░████████▀████████░░░        ██████ ██████  ██████  ██████ ██████          ██████ ██████  ██████                                                           \n" + 
+				" ░░▄▄█▀▀▀▀█░░░█▀▀▀▀█▄▄░         ██████ ██████  ██████  ██████ ██████  ██████  ██████ ██████  ██████                                                                  \n"+
+				" ░░▀▄▄▄▄▄▀▀░░░▀▀▄▄▄▄▄▀░░        ██████ ██████  ██████  ██████ ██████  ██████  ██████ ██████  ██████                                                                 \n" + 
+				"\n");
+	}
 		
 		
 		
@@ -485,14 +515,14 @@ public class RessurrectionGom {
 		resposta.add("número do pulo + 2"); // como não sei qual é a resposta correta levei que seria essa
 
 		do {
-			System.out.println("Qual alternativa está correta? ");
-
+			imgDesafio1Complemento();
+			System.out.println("                                     Qual alternativa está correta? ");
 			Collections.shuffle(resposta);
-			System.out.println("A)" + resposta.get(0));
-			System.out.println("B)" + resposta.get(1));
-			System.out.println("C)" + resposta.get(2));
-			System.out.println("D)" + resposta.get(3));
-
+			System.out.println("                                     A)" + resposta.get(0));
+			System.out.println("                                     B)" + resposta.get(1));
+			System.out.println("                                     C)" + resposta.get(2));
+			System.out.println("                                     D)" + resposta.get(3));
+			centro(5);
 			r = sc.next();
 
 			// (A) - número do pulo + 3
