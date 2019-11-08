@@ -564,6 +564,34 @@ public class RessurrectionGom {
 			centro(16);
 			continuar();
 			
+			centro(16);
+			System.out.println("\n" +
+				"                                  Diante Desta Escolha\n" +
+				"                                   Apenas duas opções\n" +
+				"                                 O que você vai Fazer?\n\n"+
+				"                                                         Selecione sua resposta\n"+
+				"                                 1 - Fazer o Asalto"+
+				"                                 2 - Seguir seu caminho");
+			centro(16);
+			String acao = sc.next();
+			continuar();
+			
+			switch (acao) {
+			case "1":
+				centro(16);
+				System.out.println("                               Vocé Morreu pq é um otário");
+				centro(16);
+				continuar();
+				break;
+			case "2":
+				centro(16);
+				System.out.println("                               Vocé Morreu atropelado");
+				centro(16);
+				continuar();
+			default:
+				break;
+			}
+			
 			
 		}
 		
