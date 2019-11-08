@@ -288,6 +288,130 @@ public class Ressurrection {
 
 
 			}
+	/////////////////////////////////////////////// TERCEIRO DESAFIO DO JOGO //////////////////////////////////////////////
+	static void Desafio3() {
+		String r = "";
+		String resp = "";
+		String lul = "Fios de teia  = 4 * peso * 1000 Aneis de Teia = (1000 *  peso * 4) / 12";
+		int n1 = 0;
+		ArrayList<String> resposta = new ArrayList<String>();
+		resposta.add("Fios de teia  = 4 * peso * 1000 Aneis de Teia = (1000 *  peso * 4) / 12"); // correta
+		resposta.add("Fios de teia  = 4 * peso * 900\\r Aneis de Teia = (900 *  peso * 4) / 12");
+		resposta.add("Fios de teia  = 2 * peso * 1000\\r Aneis de Teia = (1000 *  peso * 2) / 9");
+		resposta.add("Não confiar na aranha, e pular em qualquer lugar do abismo"); 
+
+		do {
+			
+			System.out.println("                                     Qual alternativa está correta? ");
+			Collections.shuffle(resposta);
+			System.out.println("                                     A)" + resposta.get(0));
+			System.out.println("                                     B)" + resposta.get(1));
+			System.out.println("                                     C)" + resposta.get(2));
+			System.out.println("                                     D)" + resposta.get(3));
+			
+			r = sc.next();
+
+			
+
+			switch (r) {
+			case "a":
+			case "A":
+
+				resp = resposta.get(0);
+				break;
+			case "b":
+			case "B":
+
+				resp = resposta.get(1);
+				break;
+			case "c":
+			case "C":
+
+				resp = resposta.get(2);
+				break;
+			case "d":
+			case "D":
+
+				resp = resposta.get(3);
+				break;
+
+			default:
+				System.out.println("Alternativa inválida");
+			}
+
+			if (lul.equals(resp)) {
+				System.out.println("Resposta correta!");
+				n1 = n1 + 2;
+
+			} else {
+				System.out.println("Resposta incorreta!");
+			}
+		} while (n1 <= 1);
+		
+	}
+	/////////////////////////////////////////////// QUARTO DESAFIO DO JOGO //////////////////////////////////////////////
+		static void Desafio4() {
+			
+			String r = "";
+			String resp = "";
+			String lul = "Função = desconhecido * 2 desconhecido = zero  e  cinco";
+			int n1 = 0;
+			ArrayList<String> resposta = new ArrayList<String>();
+			resposta.add("Função = desconhecido * 2 desconhecido = zero  e  cinco"); // correta
+			resposta.add(" Função = desconhecido * 2 desconhecido = um e três");
+			resposta.add("Função = desconhecido * 0 desconhecido = zero  e  três");
+			resposta.add("atravessar sem se preocupar com o caminho e deixar o gato para trás"); 
+
+			do {
+				
+				System.out.println("                                 E agora? o que você acha que isso pode representar? tenho algumas opções para mostrar: ");
+				Collections.shuffle(resposta);
+				System.out.println("                                     A)" + resposta.get(0));
+				System.out.println("                                     B)" + resposta.get(1));
+				System.out.println("                                     C)" + resposta.get(2));
+				System.out.println("                                     D)" + resposta.get(3));
+				
+				r = sc.next();
+
+				
+
+				switch (r) {
+				case "a":
+				case "A":
+
+					resp = resposta.get(0);
+					break;
+				case "b":
+				case "B":
+
+					resp = resposta.get(1);
+					break;
+				case "c":
+				case "C":
+
+					resp = resposta.get(2);
+					break;
+				case "d":
+				case "D":
+
+					resp = resposta.get(3);
+					break;
+
+				default:
+					System.out.println("Alternativa inválida");
+				}
+
+				if (lul.equals(resp)) {
+					System.out.println("Resposta correta!");
+					n1 = n1 + 2;
+
+				} else {
+					System.out.println("Resposta incorreta!");
+				}
+			} while (n1 <= 1);
+
+
+	}
 	
 	static void desafio4() {
 			int i = 1;
