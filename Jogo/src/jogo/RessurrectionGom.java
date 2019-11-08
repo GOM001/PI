@@ -463,7 +463,7 @@ public class RessurrectionGom {
 					"                                             | Não tenho ninguém com quem contar. Não tenho família, nem mesmo amigos , perdi tudo que eu   |       \n" +
 					"                                             | tinha e sinto que viver não tem mais sentido. Meus alugueis estão atrasados a mesês, não     |       \n" +
 					"                                             | tenho nada mais para comer. Hoje mesmo peguei restos no lixo de um restaurante. Minha vida   |       \n" +
-					"                                             | simplismente acabou.         																 |       \n" +
+					"                                             | simplesmente acabou.         																 |       \n" +
 					"                                             |______________________________________________________________________________________________|       \n" +
 					"                                            /                                                                                                       \n" +
 					"                                           /                                                                                                        \n" +
@@ -530,9 +530,9 @@ public class RessurrectionGom {
 			System.out.println("\n" +
 					"                                             _______________________________________________________________________________________________        \n" +
 					"                                             | Eu trouxe a arma. Sei que não deveria, mas eu preciso tanto disso                            |       \n" +
-					"                                             | O posto de gasolina só tem um funcionario hoje, sei disso, não cou machuxar ninguém          |       \n" +
+					"                                             | O posto de gasolina só tem um funcionario hoje, sei disso, não vou machucar ninguém          |       \n" +
 					"                                             | Só preciso pegar o Dinheiro e sair. Nunca mais farei novamente, vou arrumar um emprego e     |       \n" +
-					"                                             | talvez até possa devolver esse dinheiro que pequei. Sim eu posso devolver!                   |       \n" +
+					"                                             | talvez até possa devolver esse dinheiro que peguei. Sim eu posso devolver!                   |       \n" +
 					"                                             |______________________________________________________________________________________________|       \n" +
 					"                                            /                                                                                                       \n" +
 					"                                           /                                                                                                        \n" +
