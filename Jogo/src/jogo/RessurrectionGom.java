@@ -348,6 +348,25 @@ public class RessurrectionGom {
 
 		// INDRODUÇÃO
 		static void introducao() {
+			
+			centro(16);
+			System.out.println("\n" +
+				"                                  Este Jogo não é Baseado em fatos reais\n" +
+				"                          Todos os personagens e senarios são puramente ficticios\n" +
+				"                          Qualquer semelhança com a vida real é mera conhecidencia\n");
+			centro(16);
+			drible();
+			continuar();
+			
+			centro(16);
+			System.out.println("\n" +
+				"                                                 Ressurection\n\n" +
+				"                                                    Vila T\n" +
+				"                                               Novembro de 2019");
+			centro(16);
+			continuar();
+			
+			
 			centro(10);
 			System.out.println("\n" +
 					"                                             _______________________________________________________________________________________________        \n" +
@@ -375,7 +394,6 @@ public class RessurrectionGom {
 					"                          ██    ██     ██                                                                                                           \n" + 
 					"\n");
 			centro(7);
-			drible();
 			continuar();
 			
 			
