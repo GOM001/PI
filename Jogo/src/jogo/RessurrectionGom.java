@@ -433,9 +433,9 @@ public class RessurrectionGom {
 			System.out.println("\n" +
 					"                                             _______________________________________________________________________________________________        \n" +
 					"                                             | Tenho apenas 23 anos de idade, estava no segundo ano de faculdade quando minha mãe, a única  |       \n" +
-					"                                             | pessoa que me amava nesse mundo sucumbiu para um cancer de estomago que a atormentava havia  |       \n" +
-					"                                             | 7 longos mesês. Ela era quem provia a maior parte da renda em casa trabalhando como diarista |       \n" +
-					"                                             | todos os dias sem palsa e sem folga, desde que eu me entendo por gente.                      |       \n" +
+					"                                             | pessoa que me amava nesse mundo sucumbiu para um câncer de estomago que a atormentava havia  |       \n" +
+					"                                             | 7 longos meses. Ela era quem provia a maior parte da renda em casa trabalhando como diarista |       \n" +
+					"                                             | todos os dias sem pausa e sem folga, desde que eu me entendo por gente.                      |       \n" +
 					"                                             |______________________________________________________________________________________________|       \n" +
 					"                                            /                                                                                                       \n" +
 					"                                           /                                                                                                        \n" +
@@ -464,8 +464,8 @@ public class RessurrectionGom {
 					"                                             _______________________________________________________________________________________________        \n" +
 					"                                             | Pra ajudar eu trabalhava entregando pizzas em uma pizzaria do bairro, mas no mês passado     |       \n" +
 					"                                             | meu chefe me demitiu, ele disse que não tinha como eu trabalhar para ele chegando atrasado   |       \n" +
-					"                                             | todos os dias. Eu apenas saí e fui cuidar da minha mãe. larguei a faculdade na seman seguinte|       \n" +
-					"                                             | um mês antes do final do semestre e assisti minha mãe morrer em uma cama de hospital         |       \n" +
+					"                                             | todos os dias. Eu apenas saí e fui cuidar da minha mãe. larguei a faculdade na semana seguin-|       \n" +
+					"                                             | te um mês antes do final do semestre e assisti minha mãe morrer em uma cama de hospital      |       \n" +
 					"                                             |______________________________________________________________________________________________|       \n" +
 					"                                            /                                                                                                       \n" +
 					"                                           /                                                                                                        \n" +
@@ -493,9 +493,9 @@ public class RessurrectionGom {
 			System.out.println("\n" +
 					"                                             _______________________________________________________________________________________________        \n" +
 					"                                             | Não tenho ninguém com quem contar. Não tenho família, nem mesmo amigos , perdi tudo que eu   |       \n" +
-					"                                             | tinha e sinto que viver não tem mais sentido. Meus alugueis estão atrasados a mesês, não     |       \n" +
+					"                                             | tinha e sinto que viver não tem mais sentido. Meus alugueis estão atrasados a meses, não     |       \n" +
 					"                                             | tenho nada mais para comer. Hoje mesmo peguei restos no lixo de um restaurante. Minha vida   |       \n" +
-					"                                             | simplismente acabou.         																 |       \n" +
+					"                                             | simplismente acabou.         								     |							 |       \n" +
 					"                                             |______________________________________________________________________________________________|       \n" +
 					"                                            /                                                                                                       \n" +
 					"                                           /                                                                                                        \n" +
@@ -525,7 +525,7 @@ public class RessurrectionGom {
 					"                                             | Hoje tive um pensamento...                                                                   |       \n" +
 					"                                             | Tenho uma pequena arma que ganhei de presente a muitos anos, ela não faz nada, mas é uma     |       \n" +
 					"                                             | replica perfeita de uma pistola de calibre 22.                                               |       \n" +
-					"                                             | Eu pensei que talvez pudesse usala para fazer um asalto, não é algo que quero fazer, mas...  |       \n" +
+					"                                             | Eu pensei que talvez pudesse usalá para fazer um assalto, não é algo que quero fazer, mas... |       \n" +
 					"                                             |______________________________________________________________________________________________|       \n" +
 					"                                            /                                                                                                       \n" +
 					"                                           /                                                                                                        \n" +
@@ -562,9 +562,9 @@ public class RessurrectionGom {
 			System.out.println("\n" +
 					"                                             _______________________________________________________________________________________________        \n" +
 					"                                             | Eu trouxe a arma. Sei que não deveria, mas eu preciso tanto disso                            |       \n" +
-					"                                             | O posto de gasolina só tem um funcionario hoje, sei disso, não cou machuxar ninguém          |       \n" +
+					"                                             | O posto de gasolina só tem um funcionario hoje, sei disso, não vou machucar ninguém          |       \n" +
 					"                                             | Só preciso pegar o Dinheiro e sair. Nunca mais farei novamente, vou arrumar um emprego e     |       \n" +
-					"                                             | talvez até possa devolver esse dinheiro que pequei. Sim eu posso devolver!                   |       \n" +
+					"                                             | talvez até possa devolver esse dinheiro que peguei. Sim eu posso devolver!                   |       \n" +
 					"                                             |______________________________________________________________________________________________|       \n" +
 					"                                            /                                                                                                       \n" +
 					"                                           /                                                                                                        \n" +
@@ -612,7 +612,7 @@ public class RessurrectionGom {
 			case "1":
 				centro(16);
 				System.out.println("                               Protagonista se aproxima do único funcionário\n"
-								 + "                               presente no postoe anuncia o assalto\n");
+								 + "                               presente no posto e anuncia o assalto\n");
 				centro(16);
 				continuar();
 				
