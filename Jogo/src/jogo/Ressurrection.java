@@ -411,7 +411,7 @@ public class Ressurrection {
 	/////////////////////////////////////////////// TERCEIRO DESAFIO DO JOGO //////////////////////////////////////////////
 	static void Desafio3() {
 		String r = "";
-		boolean = true;
+		boolean gm = true;
 		String resp = "";
 		String lul = "Fios de teia  = 4 * peso * 1000 Aneis de Teia = (1000 *  peso * 4) / 12";
 		int n1 = 0;
