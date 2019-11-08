@@ -225,6 +225,7 @@ public class Ressurrection {
 			String resp="";
 			String lul = "número do pulo + 2";
 			int n1=0;
+			boolean gm= true;
 			ArrayList<String> resposta = new ArrayList<String>();
 			resposta.add("número do pulo + 3");
 			resposta.add("número do pulo * 3");
@@ -278,19 +279,24 @@ public class Ressurrection {
 
 			if(lul.equals(resp)) {
 			System.out.println("Resposta correta!");
-			n1=n1+2;
-
+			n1=n1+5;
+				gm = false;
+				
 			}else {
 			System.out.println("Resposta incorreta!");
+				n1++;
+				
+				gm = true;
 			}
-			}while(n1 <= 1);
+			}while(n1 <= 2);
 
-
-
+		if (gm==true){
+			gameover();
 			}
 	/////////////////////////////////////////////// TERCEIRO DESAFIO DO JOGO //////////////////////////////////////////////
 	static void Desafio3() {
 		String r = "";
+		boolean = true;
 		String resp = "";
 		String lul = "Fios de teia  = 4 * peso * 1000 Aneis de Teia = (1000 *  peso * 4) / 12";
 		int n1 = 0;
@@ -341,17 +347,25 @@ public class Ressurrection {
 
 			if (lul.equals(resp)) {
 				System.out.println("Resposta correta!");
-				n1 = n1 + 2;
+				n1 = n1 + 5;
+				gm=false;
 
 			} else {
 				System.out.println("Resposta incorreta!");
+				n1++;
+				gm=true;
 			}
-		} while (n1 <= 1);
+		} while (n1 <= 2);
+		
+		if (gm==true){
+			gameover();
+			}
 		
 	}
+			
 	/////////////////////////////////////////////// QUARTO DESAFIO DO JOGO //////////////////////////////////////////////
 		static void Desafio4() {
-			
+			boolean gm = true;
 			String r = "";
 			String resp = "";
 			String lul = "Função = desconhecido * 2 desconhecido = zero  e  cinco";
@@ -403,13 +417,17 @@ public class Ressurrection {
 
 				if (lul.equals(resp)) {
 					System.out.println("Resposta correta!");
-					n1 = n1 + 2;
-
+					n1 = n1 + 5;
+					gm=false;
 				} else {
 					System.out.println("Resposta incorreta!");
+					gm= false;
 				}
-			} while (n1 <= 1);
+			} while (n1 <= 2);
 
+			if (gm==true){
+			gameover();
+			}
 
 	}
 	
