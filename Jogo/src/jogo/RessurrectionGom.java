@@ -985,15 +985,21 @@ public class RessurrectionGom {
 				System.out.println(" Opcao Invalida! Tente Novamente.");
 							}
 			if(resposta == respcorreta) {
+				gm = false;
 				System.out.println("Parabéns Alma sedenda pela vida voce conseguiu resolver o desafio!");
 				i = 5;
 			}
 			else {
+				gm = true;
 				System.out.println(" Essa não Jovem alma, deixe sua ansiedade de lado e tenta mais uma vez e nos salve desse deserto! ");
 			}
 			
 			Collections.shuffle(resp);
 		} while (i < 3);
+			if(gm==true) {
+			
+			Ressurrection.gameOver();
+	}
 
 	}
 	
