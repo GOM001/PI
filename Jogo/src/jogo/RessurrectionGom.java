@@ -939,8 +939,8 @@ public class RessurrectionGom {
 		sc.nextLine();
 	}
 
-	static void desafio2() {
-		int i = 1;
+		static void desafio2() {
+		int i = 1, resposta =0 , respcorreta =  4;
 
 		ArrayList<Integer> resp = new ArrayList<Integer>();
 
@@ -963,60 +963,35 @@ public class RessurrectionGom {
 
 			case "a":
 			case "A":
-				if (resp.get(0) == 4) {
-					System.out.println(" Parabéns Voce Acertou! ");
-					i = 3;
-				} else {
-
-					System.out.println(" Tente novamente!");
-				}
+				resposta = resp.get(0);
 				break;
 			case "b":
 			case "B":
-				if (resp.get(1) == 4) {
-					System.out.println(" Parabéns Voce Acertou! ");
-					i = 3;
-				} else {
-
-					System.out.println(" Tente novamente!");
-				}
+				resposta = resp.get(1);
 				break;
 			case "c":
 			case "C":
-				if (resp.get(2) == 4) {
-					System.out.println(" Parabéns Voce Acertou! ");
-					i = 3;
-				} else {
-
-					System.out.println(" Tente novamente!");
-				}
+				resposta = resp.get(2);		
 				break;
-
 			case "D":
 			case "d":
-				if (resp.get(3) == 4) {
-					System.out.println(" Parabéns Voce Acertou! ");
-					i = 3;
-				} else {
-
-					System.out.println(" Tente novamente!");
-				}
+				resposta = resp.get(3);
 				break;
 			case "e":
 			case "E":
-				if (resp.get(4) == 4) {
-					System.out.println(" Parabéns Voce Acertou! ");
-					i = 3;
-				} else {
-
-					System.out.println(" Tente novamente!");
-				}
-
+				resposta = resp.get(4);
 			default:
 
-				System.out.println(" Opcao Invalida!");
-				i = 3;
+				System.out.println(" Opcao Invalida! Tente Novamente.");
+							}
+			if(resposta == respcorreta) {
+				System.out.println("Parabéns Alma sedenda pela vida voce conseguiu resolver o desafio!");
+				i = 5;
 			}
+			else {
+				System.out.println(" Essa não Jovem alma, deixe sua ansiedade de lado e tenta mais uma vez e nos salve desse deserto! ");
+			}
+			
 			Collections.shuffle(resp);
 		} while (i < 3);
 
