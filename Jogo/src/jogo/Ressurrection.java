@@ -291,7 +291,9 @@ public class Ressurrection {
 			}while(n1 <= 2);
 
 		if (gm==true){
-			gameover();
+			
+		}
+			//gameover();
 			}
 	//////////////////////////////////////////////// SEGUNDO DESAFIO DO JOGO///////////////////////////////////////////////
 			/*#############################################################################################################################################################
@@ -473,7 +475,7 @@ public class Ressurrection {
 		} while (n1 <= 2);
 		
 		if (gm==true){
-			gameover();
+			//gameover();
 			}
 		
 	}
@@ -541,7 +543,7 @@ public class Ressurrection {
 			} while (n1 <= 2);
 
 			if (gm==true){
-			gameover();
+			//gameover();
 			}
 
 	}

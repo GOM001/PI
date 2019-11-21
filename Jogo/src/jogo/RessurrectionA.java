@@ -5,33 +5,6 @@ import java.util.*;
 public class RessurrectionA {
 	
 	static Scanner sc = new Scanner (System.in);
-				static void guardiao() { System.out.println(""
-				 + "         █▌    ▄▄▄▄  ▐█\n" + 
-				"            ▐█▌ ▄██████▐█▌   ▄▄▄█▄\n" + 
-				"             ▐██████████▌   ████████▄\n" + 
-				"             ███████████      █▀▀▀▀▀██▄▄\n" + 						
-				"            ▄███ █████ ██    ▐▌        ▀█▄\n" + 					 
-				"            ████   █   ██    █▌          ▀▌\n" + 		"      ██████████████████████████        \n" + 
-				"           ██████  █  ███   ██               \n" + 			"    ██████████████████████████████      \n" + 
-				"          ▐██████████████   █▌ \n" + 					"    ██████████████████████████████      \n" +
-				"           ████████ █████  ▐█ \n" + 				 	  "  ████████████████████████████████   \n" + 
-				"           █████████████▌  █▌\n" + 				 	 "  ████████████████████████████████     \n"   + 
-				"           █████████████   █ \n+ 				 	"  ████████████████████████████████    \n" + 
-				"           ▐███████████   ██ \n" + 	 				"  ██████████████████████████████████  \n" +
-				"            ██████████    █▌ \n" + 				" 	   ██████        ██        ██████████  \n" +
-				"          ████████████   ██ \n" +		    	      "  	   ██████                  ██████████	\n" + 
-					"        ▐████████████  ███ \n" +		                 "██████      ██        ██    ████  ████\n" + 
-				"        █████████████▄████ \n" + 			         	 "██████      ██        ██    ██    ████\n" + 
-				"     ██████████████████████ \n" +                                   	"██████                          ██████\n" +
-				"    ███████████████████████ \n" +                                   	"██████          ████          ████████\n" +
-				"    ██████████████████████▀ \n" +                                  	"████████        ████        ██████████\n" +
-				"     █████████████████████ \n" + 	                             	 "████████████            ██████████████\n" + 
-				"      ██████████████████ \n" + "                                     	 ██  ████████████    ██████████  ██  \n" + 
-				"     ████████████████████ \n" +                                "                  ██    ██     ██       \n"+
-				"");
-												  
-																											}
-	
 	/*#############################################################################################################################################################
 	 * 
 	 * 
@@ -57,8 +30,8 @@ public class RessurrectionA {
 	do {
 	
 		Ressurrection.imgdesafio4();
-	System.out.println(" Tenho 1.000 quilos de neve e o sol está me fazendo derreter de forma constante."+
-	"\n Em cinquenta minutos mais tarde o calor irá aumentar e o seu tempo diminuir,estarei derretendo mais rápido. veja o quanto tempo tenho e resolva a questão e me ajude a sair desse deserto :"+
+	System.out.println(" Tenho 1.000 quilos de neve e o sol estÃ¡ me fazendo derreter de forma constante."+
+	"\n Em cinquenta minutos mais tarde o calor irÃ¡ aumentar e o seu tempo diminuir,estarei derretendo mais rÃ¡pido. veja o quanto tempo tenho e resolva a questÃ£o e me ajude a sair desse deserto :"+
 			"\n a)"+resp.get(0)+"\n b)"+resp.get(1)+"\n c)"+resp.get(2)+"\n d)"+resp.get(3)+"\n e)"+resp.get(4));
 			String escolha = sc.next();
 			switch (escolha) {
@@ -66,7 +39,7 @@ public class RessurrectionA {
 			case "a":
 			case "A":
 				if (resp.get(0)==4) {
-					System.out.println(" Parabéns Voce Acertou! ");
+					System.out.println(" ParabÃ©ns Voce Acertou! ");
 					i = 3;
 					gm = false;
 				}
@@ -79,7 +52,7 @@ public class RessurrectionA {
 			case "b":
 			case "B":
 				if (resp.get(1)==4) {
-					System.out.println(" Parabéns Voce Acertou! ");
+					System.out.println(" ParabÃ©ns Voce Acertou! ");
 					i = 3;
 					gm = false;
 				}
@@ -92,7 +65,7 @@ public class RessurrectionA {
 			case "c":	
 			case "C":
 				if (resp.get(2)==4) {
-					System.out.println(" Parabéns Voce Acertou! ");
+					System.out.println(" ParabÃ©ns Voce Acertou! ");
 					i = 3;
 					gm = false;
 					}
@@ -106,7 +79,7 @@ public class RessurrectionA {
 			case "D" :
 			case "d" :
 				if (resp.get(3)==4) {
-					System.out.println(" Parabéns Voce Acertou! ");
+					System.out.println(" ParabÃ©ns Voce Acertou! ");
 					i = 3;
 					gm = false;
 				}
@@ -118,7 +91,7 @@ public class RessurrectionA {
 			case "e":
 			case "E":
 				if (resp.get(4)==4) {
-					System.out.println(" Parabéns Voce Acertou! ");
+					System.out.println(" ParabÃ©ns Voce Acertou! ");
 					i = 3;
 					gm = false;
 				}
@@ -175,8 +148,8 @@ public class RessurrectionA {
 	
 	do {
 	Ressurrection.imgdesafio5();
-	System.out.println("Ok mortal ansioso pela vida, aqui vai meu desafio: você está em ambiente inóspito que inicialmente  tem 125 bactérias"+
-	"\n Sabendo-se que essa população de bactérias dobra a cada 2 horas, o tempo necessário, em horas, para que o número de bactérias cheguem a 256.000, é igual a: "+
+	System.out.println("Ok mortal ansioso pela vida, aqui vai meu desafio: vocÃª estÃ¡ em ambiente inÃ³spito que inicialmente  tem 125 bactÃ©rias"+
+	"\n Sabendo-se que essa populaÃ§Ã£o de bactÃ©rias dobra a cada 2 horas, o tempo necessÃ¡rio, em horas, para que o nÃºmero de bactÃ©rias cheguem a 256.000, Ã© igual a: "+
 	"\n a)"+resp.get(0)+"\n b)"+resp.get(1)+"\n c)"+resp.get(2)+"\n d)"+resp.get(3)+"\n e)"+resp.get(4));
 	String escolha = sc.next(); // entrada do usuario, opcao escolhida
 	
@@ -185,7 +158,7 @@ public class RessurrectionA {
 	case "a":
 	case "A":
 		if (resp.get(0)==22) {
-			System.out.println(" Parabéns Voce Acertou! ");
+			System.out.println(" ParabÃ©ns Voce Acertou! ");
 			i = 3;
 			gm = false;
 		}
@@ -198,7 +171,7 @@ public class RessurrectionA {
 	case "b":
 	case "B":
 		if (resp.get(1)==22) {
-			System.out.println(" Parabéns Voce Acertou! ");
+			System.out.println(" ParabÃ©ns Voce Acertou! ");
 			i = 3;
 			gm = false;
 		}
@@ -211,7 +184,7 @@ public class RessurrectionA {
 	case "c":	
 	case "C":
 		if (resp.get(2)==22) {
-			System.out.println(" Parabéns Voce Acertou! ");
+			System.out.println(" ParabÃ©ns Voce Acertou! ");
 			i = 3;
 			gm = false;
 			}
@@ -225,7 +198,7 @@ public class RessurrectionA {
 	case "D" :
 	case "d" :
 		if (resp.get(3)==22) {
-			System.out.println(" Parabéns Voce Acertou! ");
+			System.out.println(" ParabÃ©ns Voce Acertou! ");
 			i = 3;
 			gm = false;
 		}
@@ -237,7 +210,7 @@ public class RessurrectionA {
 	case "e":
 	case "E":
 		if (resp.get(4)==22) {
-			System.out.println(" Parabéns Voce Acertou! ");
+			System.out.println(" ParabÃ©ns Voce Acertou! ");
 			i = 3;
 			gm = false;
 		}

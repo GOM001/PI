@@ -292,7 +292,6 @@ public class RessurrectionGom {
 		static void jogar() {
 			System.out.println("Jogar");
 			int posicaoLogin = posicaoLivre();
-			String loginAtual = login[posicaoLogin];
 			int faseAtual = fase[posicaoLogin];
 			switch (faseAtual) {
 			case 0:
@@ -949,6 +948,7 @@ public class RessurrectionGom {
 		resp.add(6);
 		resp.add(4);
 		resp.add(2);
+		boolean gm = false;
 
 		do {
 			i = i + 1;
